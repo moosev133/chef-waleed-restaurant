@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#1E241B"><meta name="description" content="Chef Waleed Restaurant, Tamrah. Explore the menu, discover our dining room, and request your table. Open 12:00–22:30.">
+<script>
+// Disable restoration before the browser can restore an old footer position.
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+</script>
 <title>Chef Waleed — An evening beautifully savoured</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%231E241B'/%3E%3Ctext x='32' y='44' text-anchor='middle' fill='%23C5A059' font-family='serif' font-size='42'%3EW%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,13 +30,49 @@
 .photo-menu-action{margin:0 0 27px}.event-phone:hover{color:var(--cream);text-decoration:underline}.intro-overlay>[data-t=welcomeIntro]{letter-spacing:0;font-size:14px}
 
 .provider-credit{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 14px;padding:24px 0 28px;border-top:1px solid var(--line);color:var(--muted);font:13px/1.8 'Plus Jakarta Sans',sans-serif;text-align:center}.provider-credit p{margin:0}.provider-name{color:var(--pale);font-weight:600}.provider-name:hover{text-decoration:underline;text-underline-offset:4px}.provider-instagram-label{color:var(--muted)}.provider-instagram{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 15px;border:1px solid var(--line);border-radius:2px;color:var(--pale);background:#c5a0590a;transition:background .2s,border-color .2s}.provider-instagram:hover{background:#c5a0591f;border-color:var(--gold)}.provider-instagram .icon{width:16px;height:16px}@media(max-width:600px){.provider-credit p{flex-basis:100%}}
+
+/* Keep the phone's section shortcuts in the same order as the document. */
+.mobile-sections{display:none}
+main>section{position:relative}
+#dishList{overflow-anchor:none}
+@media(max-width:800px){
+ html{scroll-padding-top:130px}
+ .nav{height:72px;gap:12px}
+ .nav-actions{gap:10px}
+ #navigation{top:100%;max-height:calc(100svh - 120px);overflow-y:auto;z-index:2}
+ #navigation a{font-size:15px;min-height:44px}
+ .mobile-sections{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:0 12px;background:#141b11;border-top:1px solid var(--line)}
+ .mobile-sections a{display:flex;align-items:center;justify-content:center;min-height:46px;padding:8px 2px;border-bottom:2px solid transparent;color:var(--muted);font-size:12px;white-space:nowrap}
+ .mobile-sections a:hover,.mobile-sections a[aria-current=location]{color:var(--pale);border-bottom-color:var(--gold);background:#c5a0590b}
+ .hero-copy{padding:34px 0 28px}
+ .hero-inner,html[dir=rtl] .hero-inner{gap:0}
+ .hero h1{font-size:clamp(54px,14vw,68px);margin:20px 0}
+ html[dir=rtl] .hero h1{font-size:clamp(36px,10.6vw,48px);line-height:1.45}
+ .hero-description{font-size:15px}
+ .hero-cta{margin-top:24px;gap:10px}
+ .hero-cta .btn{flex:1;padding:12px 10px;font-size:12px}
+ .hero-details{margin-top:22px}
+ .hero-photo{height:340px}
+ .section{padding:50px 0}
+ .section-head{margin-bottom:28px}
+ .menu-tabs{flex-wrap:wrap;overflow:visible;gap:6px;padding-bottom:18px}
+ .menu-tabs button{flex:0 1 auto;min-height:44px;padding:8px 12px;font-size:12px}
+ .menu-tabs button[aria-selected=true]{background:#c5a05922}
+ .menu-category-heading{scroll-margin-top:140px}
+ .dish-title{align-items:start}
+ input,select,textarea{font-size:16px}
+ .lang{font-size:13px}
+}
+@media(max-width:380px){.masthead .brand .wordmark{font-size:13px;letter-spacing:.06em}.nav-actions{gap:6px}.mobile-sections{padding:0 6px}.mobile-sections a{font-size:11px}}
 </style>
 </head>
 <body>
 <a href="#menu" class="skip-link">Skip to menu</a>
 <div class="intro-overlay" aria-hidden="true"><div class="logo intro-mark"></div><div class="intro-label">CHEF WALEED</div><div class="intro-line"></div><span data-t="welcomeIntro">أهلاً بكم على مائدتنا</span></div>
 <div class="topbar"><div class="wrap"><span data-t="topLocation">مدخل طمرة · مواقف متوفرة</span><div class="topbar-links"><a href="https://www.instagram.com/chef_waled__restaurant?stkn=dmRjazYyYjg5Njlj" target="_blank" rel="noopener">@chef_waled__restaurant</a><a href="tel:+97248512000" dir="ltr">04 851 2000</a></div></div></div>
-<header class="masthead"><div class="wrap nav"><a href="#home" class="brand" aria-label="Chef Waleed home"><span class="logo" role="img" aria-label="Chef Waleed restaurant logo"></span><span class="wordmark">CHEF WALEED<small>RESTAURANT</small></span></a><nav id="navigation" aria-label="Main navigation"><a href="#menu" data-t="navMenu">قائمة الطعام</a><a href="#booking" data-t="navBooking">الطاولات والحجز</a><a href="#reviews" data-t="navReviews">آراء ضيوفنا</a><a href="#events" data-t="navEvents">المناسبات الخاصة</a><a href="#location" data-t="navLocation">موقعنا</a></nav><div class="nav-actions"><select class="lang" id="language" aria-label="Language"><option value="en">EN</option><option value="ar" selected>العربية</option><option value="he">עברית</option></select><a href="#booking" class="btn small-btn" data-t="requestTable">اطلب طاولتك</a><button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"><i data-lucide="menu" class="icon"></i></button></div></div></header>
+<header class="masthead"><div class="wrap nav"><a href="#home" class="brand" aria-label="Chef Waleed home"><span class="logo" role="img" aria-label="Chef Waleed restaurant logo"></span><span class="wordmark">CHEF WALEED<small>RESTAURANT</small></span></a><nav id="navigation" aria-label="Main navigation"><a href="#menu" data-t="navMenu">قائمة الطعام</a><a href="#booking" data-t="navBooking">الطاولات والحجز</a><a href="#events" data-t="navEvents">المناسبات الخاصة</a><a href="#reviews" data-t="navReviews">آراء ضيوفنا</a><a href="#location" data-t="navLocation">موقعنا</a></nav><div class="nav-actions"><select class="lang" id="language" aria-label="Language"><option value="en">EN</option><option value="ar" selected>العربية</option><option value="he">עברית</option></select><a href="#booking" class="btn small-btn" data-t="requestTable">اطلب طاولتك</a><button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"><i data-lucide="menu" class="icon"></i></button></div></div><div class="mobile-sections" role="navigation" aria-label="Restaurant sections">
+<a href="#menu" data-t="mobileMenu">القائمة</a><a href="#booking" data-t="mobileBooking">الطاولات</a><a href="#events" data-t="mobileEvents">المناسبات</a><a href="#reviews" data-t="mobileReviews">الآراء</a><a href="#location" data-t="mobileLocation">الموقع</a>
+</div></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-inner"><div class="hero-copy"><div class="eyebrow" data-t="heroEyebrow">للّمة طعم آخر</div><h1><span data-t="heroLine1">أمسية تجمعنا،</span><br><em data-t="heroLine2">ونكهة</em><br><span data-t="heroLine3">تبقى بالذاكرة.</span></h1><p class="hero-description" data-t="heroDescription">طعام شهيّ. صحبة دافئة. ولمسة من السحر.<br>أهلاً بكم في شيف وليد، حيث لكل طاولة حكاية.</p><div class="hero-cta"><a href="#menu" class="btn" data-t="exploreMenu">اكتشف القائمة</a><a href="#booking" class="btn secondary" data-t="requestTable">اطلب طاولتك</a></div><div class="hero-details"><span><i data-lucide="clock-3" class="icon"></i><bdi>12:00 – 22:30</bdi></span><span><i data-lucide="map-pin" class="icon"></i><span data-t="address">مدخل طمرة</span></span></div></div><div class="hero-photo" role="img" aria-label="Chef Waleed restaurant interior with white blossoms and warm amber lighting"><div class="stamp"><span data-t="stampTop">يُحضّر</span><span class="serif" data-t="stampMiddle">بشغف</span><span data-t="stampBottom">ويُقدّم بحب</span></div><div class="photo-note"><div><span class="eyebrow" data-t="photoEyebrow">مكان يحلو فيه البقاء</span><p data-t="photoTitle">طاولتكم بانتظاركم.</p></div><span class="small">01 / 01</span></div></div><div class="hero-bottom"><span data-t="heroBottom">نحضّره بعناية. ونتشاركه بمحبة.</span><a href="#menu" data-t="scrollDiscover">اكتشف المزيد</a></div></div></section>
 <div class="section-rule"><div class="wrap contact-ribbon"><span><i data-lucide="utensils" class="icon"></i><span data-t="ribbonFood">نكهات تجمعنا</span></span><span><i data-lucide="flower-2" class="icon"></i><span data-t="ribbonRoom">أجواء لا تُنسى</span></span><span><i data-lucide="wine" class="icon"></i><span data-t="ribbonMoment">أمسية تستحق وقتكم</span></span></div></div>
@@ -50,7 +90,759 @@
 <script>window.addEventListener('DOMContentLoaded',()=>{window.lucide?.createIcons();document.getElementById('mobileToggle').onclick=()=>{const n=document.getElementById('navigation');n.classList.toggle('open');document.getElementById('mobileToggle').setAttribute('aria-expanded',String(n.classList.contains('open')))};});</script>
 <script>'use strict';
 const MENU={"main-dishes": {"en": [{"name": "Mix 1 – Fried", "description": "Fried pieces of shrimp, calamari, and calamari heads.", "price": "₪100"}, {"name": "Mix 1 – Cooked", "description": "Cooked pieces of shrimp, calamari, calamari heads, and mussels.", "price": "₪100"}, {"name": "Calamari with Labneh", "description": "Fried and cooked calamari pieces served with labneh.", "price": "₪85"}, {"name": "Fried Shrimp & Calamari", "description": "Fried shrimp and calamari pieces.", "price": "₪100"}, {"name": "Cooked Shrimp & Calamari", "description": "Cooked shrimp and calamari pieces.", "price": "₪100"}, {"name": "Cooked Shrimp", "description": "Shrimp prepared in a special style.", "price": "₪100"}, {"name": "Grilled Shrimp", "description": "Charcoal-grilled shrimp.", "price": "₪100"}, {"name": "Fish Fillet", "description": "Fish fillet prepared upon request.", "price": "₪65"}, {"name": "Seafood Platter for Two", "description": "Luxury seafood platter for two people.", "price": "₪240"}, {"name": "Mussels", "description": "Cooked mussels in creamy sauce.", "price": "₪75"}, {"name": "Dennis Fish – Fried / Grilled", "description": "Dennis fish, fried or grilled upon request.", "price": "₪100"}, {"name": "Cooked Calamari", "description": "Calamari prepared in a special style.", "price": "₪85"}, {"name": "Sea Bass – Fried / Grilled", "description": "Sea bass, fried or grilled.", "price": "₪100"}, {"name": "Fried Calamari", "description": "Calamari prepared in a special style.", "price": "₪85"}, {"name": "Fried Calamari Heads", "description": "Fried calamari heads prepared in a special way.", "price": "₪80"}, {"name": "Salmon", "description": "Grilled salmon.", "price": "₪100"}, {"name": "Shrimp", "description": "Shrimp prepared in a special style.", "price": "₪100"}, {"name": "Seafood Fukhara", "description": "Hot clay pot dish with seafood.", "price": "₪100"}, {"name": "Kebab Fukhara", "description": "Hot clay pot dish with kebab and rice.", "price": "₪100"}, {"name": "Chicken Fukhara", "description": "Hot clay pot dish with chicken, prepared upon request.", "price": "₪100"}, {"name": "Meat Fukhara", "description": "Slow-cooked meat in clay pot with vegetables.", "price": "₪115"}, {"name": "Sinta Steak", "description": "Premium grilled sinta steak.", "price": "₪130"}, {"name": "Entrecôte", "description": "Premium grilled wagyu steak.", "price": "₪135"}, {"name": "Veal Fillet", "description": "Grilled veal fillet slices.", "price": "₪135"}, {"name": "Grilled Mix", "description": "Kebab skewer, bargit skewer, and lamb skewer.", "price": "₪125"}, {"name": "Lamb Skewers", "description": "Two grilled lamb skewers.", "price": "₪130"}, {"name": "Lamb Ribs", "description": "Grilled lamb ribs.", "price": "₪130"}, {"name": "Sinta", "description": "Grilled sinta.", "price": "₪130"}, {"name": "Kebab", "description": "Grilled kebab pieces.", "price": "₪85"}, {"name": "Veal Stroganoff", "description": "Veal pieces cooked in mushroom cream sauce.", "price": "₪95"}, {"name": "Cooked Schnitzel Pieces", "description": "Fried and cooked schnitzel pieces.", "price": "₪65"}, {"name": "Schnitzel", "description": "Crispy schnitzel served with side sauce.", "price": "₪60"}, {"name": "Chicken Mokbans", "description": "Fried chicken in Asian sauce.", "price": "₪65"}, {"name": "Hummus with Meat", "description": "Hummus topped with cooked meat and spices.", "price": "₪60"}, {"name": "Fillet Mokbans", "description": "Beef fillet in Asian sauce.", "price": "₪90"}, {"name": "Bargit", "description": "Slow-cooked chicken with vegetables.", "price": "₪85"}, {"name": "Chicken Breast", "description": "Seasoned grilled chicken breast.", "price": "₪85"}, {"name": "Meat Sfiha", "description": "Dough filled with grilled meat.", "price": "₪65"}, {"name": "Cordon Bleu", "description": "Chicken stuffed with rice.", "price": "₪95"}], "ar": [{"name": "ميكس 1 مقلي", "description": "قطع من الشريمبس والكلماري وروس كلماري مقليه", "price": "₪95"}, {"name": "ميكس 1 مطبوخ", "description": "قطع من الشريمبس والكلماري وروس كلماري وصدف مطبوخه", "price": "₪95"}, {"name": "كلماري مع لبنه", "description": "كلماري مقلي مع لبنه", "price": "₪85"}, {"name": "شريمبس وكلماري مقلي", "description": "قطع من الشريمبس وكلماري مقلي", "price": "₪95"}, {"name": "شريمبس وكلماري مطبوخ", "description": "قطع من الشريمبس والكلماري مطبوخ", "price": "₪95"}, {"name": "شريمبس مطبوخ", "description": "شريمبس محضر بطريقة مميزة.", "price": "₪95"}, {"name": "شريمبس مشوي", "description": "شريمبس مشوي علي الفحم", "price": "₪95"}, {"name": "بلاطه اسماك زوجيه", "description": "طبق فواكه بحر فاخر لشخصين.", "price": "₪240"}, {"name": "صدف", "description": "محار مطبوخ في صوص كريمي.", "price": "₪75"}, {"name": "دينيس مقلي/مشوي", "description": "سمك دينيس مقلي او مشوي حسب الطلب", "price": "₪100"}, {"name": "كلماري مطبوخ", "description": "كلماري محضر بطريقة مميزة.", "price": "₪85"}, {"name": "لفراك مقلي/مشوي", "description": "سمك لفراك مقلي أو مشوي.", "price": "₪100"}, {"name": "كلماري مقلي", "description": "كلماري محضر بطريقة مميزة.", "price": "₪85"}, {"name": "رؤوس كلماري مقليه", "description": "رؤوس كلماري مقليه بطريقه مميزه", "price": "₪80"}, {"name": "سلمون", "description": "سلمون مشوي", "price": "₪95"}, {"name": "شريمبس", "description": "شريمبس محضر بطريقة مميزة.", "price": "₪95"}, {"name": "فخاره فواكه بحر", "description": "طبق فخار ساخن مع فواكه بحر", "price": "₪100"}, {"name": "فخاره كباب", "description": "طبق فخار ساخن مع كباب ورز", "price": "₪100"}, {"name": "فخاره دجاج", "description": "طبق فخار ساخن مع دجاج حسب الطلب.", "price": "₪100"}, {"name": "فخاره لحم", "description": "لحم مطهو ببطء في فخار مع خضار.", "price": "₪115"}, {"name": "ستيك سينتا", "description": "ستيك سينتا الفاخر مشوي.", "price": "₪125"}, {"name": "بلاطة لحوم زوجية", "description": "بلاطة لحوم مشوية لشخصان، سيخ خروف، سيخ كباب، سيخ برجيت, ٢ اضلاع خروف و٢ فيليه بقر", "price": "₪250"}, {"name": "تريو-شيف", "description": "فيلي سينتا وضلع خروف مشوية عل فحم", "price": "₪180"}, {"name": "انتريكوت", "description": "ستيك واجيو الفاخر مشوي.", "price": "₪130"}, {"name": "فيليه عجل", "description": "شرائح فيليه عجل مشويه", "price": "₪130"}, {"name": "ميكس مشوي", "description": "سيخ كباب وسيخ برجيت وسيخ خروف", "price": "₪120"}, {"name": "سياخ خروف", "description": "وجبه 3 اسياخ خروف مشويه", "price": "₪125"}, {"name": "ضلاع خروف", "description": "وجبه اضلاع خروف مشويه", "price": "₪125"}, {"name": "كباب", "description": "قطع من الكباب المشويه", "price": "₪80"}, {"name": "سترجانوف عجل", "description": "قطع لحم عجل مطهوة بكريمة الفطر.", "price": "₪95"}, {"name": "شننتسلونيم مطبوخ", "description": "قطع شنيتسل مقلية ومطبوخة.", "price": "₪65"}, {"name": "شننتسلونيم", "description": "شنيتسل مقرمش مع صوص جانبي.", "price": "₪60"}, {"name": "موكباتس دجاج", "description": "دجاج بصلصة آسيوية.", "price": "₪65"}, {"name": "حمص مع لحمه", "description": "حمص بلحمة مطبوخة وتوابل.", "price": "₪60"}, {"name": "موكباتس فيلي", "description": "فيليه لحم بصلصة آسيوية.", "price": "₪90"}, {"name": "برچيت", "description": "جاج مشوي ببطء", "price": "₪80"}, {"name": "صدر دجاج", "description": "صدر دجاج متبل ومشوي.", "price": "₪80"}, {"name": "كوردن بلو", "description": "جاج محشو بالرز", "price": "₪90"}, {"name": "شنيتسل اطفال", "description": "قطع شنيتسل تشمل بطاطا مقليه", "price": "₪45"}, {"name": "باستا اطفال", "description": "باستا مطهوه مع صوص بندوره", "price": "₪45"}, {"name": "بيتسا اطفال", "description": "بيتسا اطفال مع اظافات", "price": "₪45"}], "he": [{"name": "מיקס 1 – מטוגן", "description": "חתיכות שרימפס, קלמארי וראשי קלמארי מטוגנים.", "price": "₪95"}, {"name": "מיקס 1 – מבושל", "description": "חתיכות שרימפס, קלמארי, ראשי קלמארי וצדפות מבושלות.", "price": "₪95"}, {"name": "קלמארי עם לבנה", "description": "חתיכות קלמארי מטוגנות ומבושלות מוגשות עם לבנה.", "price": "₪85"}, {"name": "שרימפס וקלמארי מטוגנים", "description": "חתיכות שרימפס וקלמארי מטוגנות.", "price": "₪95"}, {"name": "שרימפס וקלמארי מבושלים", "description": "חתיכות שרימפס וקלמארי מבושלות.", "price": "₪95"}, {"name": "שרימפס מבושל", "description": "שרימפס מוכן בדרך מיוחדת.", "price": "₪95"}, {"name": "שרימפס על האש", "description": "שרימפס צלוי על גחלים.", "price": "₪95"}, {"name": "מגש פירות ים לזוג", "description": "מגש פירות ים יוקרתי לשני אנשים.", "price": "₪240"}, {"name": "צדפות", "description": "צדפות מבושלות ברוטב שמנת.", "price": "₪75"}, {"name": "דניס – מטוגן / על האש", "description": "דג דניס מטוגן או צלוי לפי בקשה.", "price": "₪100"}, {"name": "קלמארי מבושל", "description": "קלמארי מוכן בדרך מיוחדת.", "price": "₪85"}, {"name": "לברק – מטוגן / על האש", "description": "דג לברק מטוגן או צלוי.", "price": "₪100"}, {"name": "קלמארי מטוגן", "description": "קלמארי מוכן בדרך מיוחדת.", "price": "₪85"}, {"name": "ראשי קלמארי מטוגנים", "description": "ראשי קלמארי מטוגנים בהכנה מיוחדת.", "price": "₪80"}, {"name": "סלמון", "description": "סלמון על האש.", "price": "₪95"}, {"name": "שרימפס", "description": "שרימפס מוכן בדרך מיוחדת.", "price": "₪95"}, {"name": "פחארה פירות ים", "description": "מנה חמה בכלי חרס עם פירות ים.", "price": "₪100"}, {"name": "פחארה קבב", "description": "מנה חמה בכלי חרס עם קבב ואורז.", "price": "₪100"}, {"name": "פחארה עוף", "description": "מנה חמה בכלי חרס עם עוף לפי בחירה.", "price": "₪100"}, {"name": "פחארה בשר", "description": "בשר בבישול איטי בכלי חרס עם ירקות.", "price": "₪115"}, {"name": "סטייק סינטה", "description": "סטייק סינטה מובחר על האש.", "price": "₪125"}, {"name": "אנטריקוט", "description": "סטייק ואגיו מובחר על האש.", "price": "₪125"}, {"name": "פילה עגל", "description": "פרוסות פילה עגל על האש.", "price": "₪125"}, {"name": "מיקס על האש", "description": "שיפוד קבב, שיפוד ברגית ושיפוד כבש.", "price": "₪120"}, {"name": "שיפודי כבש", "description": "שני שיפודי כבש על האש.", "price": "₪125"}, {"name": "צלעות כבש", "description": "צלעות כבש על האש.", "price": "₪125"}, {"name": "סינטה", "description": "סינטה על האש.", "price": "₪125"}, {"name": "קבב", "description": "חתיכות קבב על האש.", "price": "₪80"}, {"name": "סטרוגנוף עגל", "description": "נתחי עגל ברוטב שמנת פטריות.", "price": "₪95"}, {"name": "שניצל מבושל", "description": "חתיכות שניצל מטוגנות ומבושלות.", "price": "₪65"}, {"name": "שניצל", "description": "שניצל פריך עם רוטב בצד.", "price": "₪60"}, {"name": "מוקבץ עוף", "description": "עוף מטוגן ברוטב אסייתי.", "price": "₪65"}, {"name": "חומוס עם בשר", "description": "חומוס עם בשר מבושל ותבלינים.", "price": "₪60"}, {"name": "מוקבץ פילה", "description": "פילה בקר ברוטב אסייתי.", "price": "₪90"}, {"name": "ברגית", "description": "עוף בבישול איטי עם ירקות.", "price": "₪80"}, {"name": "חזה עוף", "description": "חזה עוף מתובל על האש.", "price": "₪80"}, {"name": "קורדון בלו", "description": "עוף ממולא באורז.", "price": "₪90"}, {"name": "פיצה ילדים", "description": "פיצה עם תוספות", "price": "₪45"}, {"name": "מנת שניצל ילדים", "description": "שניצל ילדים עם ציפס", "price": "₪45"}, {"name": "פסטה ילדים", "description": "פסטה ילדים עם רוטב עגבניה", "price": "₪45"}]}, "salads": {"en": [{"name": "Individual Salad Selection", "description": "A varied selection of oriental salads for one person.", "price": "₪48"}, {"name": "Individual Salad Selection (Without Meal)", "description": "A varied selection of oriental salads for one person without a main dish.", "price": "₪70"}, {"name": "Chicken Salad", "description": "Fresh vegetable mix with grilled chicken slices.", "price": "₪60"}, {"name": "Large Arabic Salad", "description": "Chopped seasonal vegetables with olive oil and lemon.", "price": "₪30"}, {"name": "Greek Salad", "description": "Lettuce, tomatoes, olives, feta cheese, and olive oil.", "price": "₪45"}, {"name": "Halloumi Salad", "description": "Mixed vegetables with grilled halloumi cheese.", "price": "₪65"}, {"name": "Large Fattoush", "description": "Fattoush salad with fried bread and seasonal vegetables.", "price": "₪55"}, {"name": "Fillet Salad", "description": "Fresh vegetables with grilled fillet meat slices.", "price": "₪89"}, {"name": "Chef’s Tabbouleh Salad", "description": "Special tabbouleh prepared the chef’s way.", "price": "₪47"}, {"name": "Toast Salad", "description": "Toast bread with vegetables, grated cheese, and special sauce.", "price": "₪60"}, {"name": "Large Tabbouleh", "description": "Traditional Lebanese tabbouleh in a large portion.", "price": "₪45"}, {"name": "Hummus", "description": "Classic smooth hummus with olive oil and lemon.", "price": "₪18"}], "ar": [{"name": "تشكيلة سلطات للفرد", "description": "تشكيلة متنوعة من السلطات الشرقية للفرد.", "price": "₪48"}, {"name": "تشكيلة سلطات للفرد بدون وجبه", "description": "تشكيلة متنوعة من السلطات الشرقية للفرد بدون وجبه.", "price": "₪70"}, {"name": "سلطة دجاج", "description": "خليط من الخضار الطازجة مع شرائح دجاج مشوي.", "price": "₪60"}, {"name": "سلطة عربية كبيرة", "description": "خضار موسمية مفرومة مع زيت الزيتون والليمون.", "price": "₪30"}, {"name": "سلطة يونانية", "description": "خس، طماطم، زيتون، جبنة فيتا، وزيت زيتون.", "price": "₪45"}, {"name": "سلطة حلومي", "description": "مزيج من الخضروات مع جبنة حلومي", "price": "₪65"}, {"name": "فتوش كبيرة", "description": "سلطة فتوش مع خبز مقلي وخضروات موسمية.", "price": "₪45"}, {"name": "سلطة فيليه", "description": "خضار طازجة مع شرائح لحم فيليه مشوي.", "price": "₪89"}, {"name": "سلطة تبولة الشيف", "description": "تبولة خاصة محضرة على طريقة الشيف.", "price": "₪47"}, {"name": "سلطة توست", "description": "خبز توست مع خضار، جبن مبشور وصوص خاص.", "price": "₪60"}, {"name": "تبولة كبيرة", "description": "تبولة لبنانية تقليدية بحجم كبير.", "price": "₪45"}, {"name": "سلطه فستق", "description": "سلطه مع الفتسق والمكسرات", "price": "₪45"}, {"name": "حمص", "description": "طبق حمص ناعم مع زيت زيتون وليمون.", "price": "₪18"}], "he": [{"name": "מבחר סלטים ליחיד", "description": "מבחר סלטים מזרחיים מגוונים לאדם אחד.", "price": "₪48"}, {"name": "מבחר סלטים ליחיד ללא מנה", "description": "מבחר סלטים מזרחיים לאדם אחד ללא מנה עיקרית.", "price": "₪70"}, {"name": "סלט עוף", "description": "תערובת ירקות טריים עם פרוסות עוף על האש.", "price": "₪60"}, {"name": "סלט ערבי גדול", "description": "ירקות עונתיים קצוצים עם שמן זית ולימון.", "price": "₪30"}, {"name": "סלט יווני", "description": "חסה, עגבניות, זיתים, גבינת פטה ושמן זית.", "price": "₪45"}, {"name": "סלט חלומי", "description": "ירקות טריים עם גבינת חלומי צלויה.", "price": "₪65"}, {"name": "פתוש גדול", "description": "סלט פתוש עם לחם מטוגן וירקות עונתיים.", "price": "₪55"}, {"name": "סלט פילה", "description": "ירקות טריים עם פרוסות פילה על האש.", "price": "₪89"}, {"name": "טאבולה שף", "description": "טאבולה מיוחדת בהכנת השף.", "price": "₪47"}, {"name": "סלט טוסט", "description": "לחם טוסט עם ירקות, גבינה מגורדת ורוטב מיוחד.", "price": "₪60"}, {"name": "טאבולה גדולה", "description": "טאבולה לבנונית מסורתית בגודל גדול.", "price": "₪45"}, {"name": "חומוס", "description": "חומוס חלק עם שמן זית ולימון.", "price": "₪18"}]}, "appetizers": {"en": [{"name": "Home Fries", "description": "Homemade fried potatoes with a special seasoning.", "price": "₪30"}, {"name": "Kibbeh (piece)", "description": "Deep-fried meat-stuffed kibbeh.", "price": "₪7"}, {"name": "Pastries", "description": "Assorted fresh pastries.", "price": "₪33"}, {"name": "Filet Carpaccio", "description": "Thin slices of filet beef with olive oil.", "price": "₪52"}, {"name": "Eggplant with Tahini", "description": "Grilled eggplant with tahini and lemon sauce.", "price": "₪35"}, {"name": "Cheese-Stuffed Mushrooms", "description": "Fresh mushrooms stuffed with melted cheese.", "price": "₪50"}, {"name": "Appetizer Platter", "description": "Luxury assortment of mixed appetizers.", "price": "₪50"}, {"name": "Mini Arayes", "description": "Small bread pockets stuffed with grilled meat.", "price": "₪40"}, {"name": "Arancini", "description": "Gourmet risotto balls.", "price": "₪40"}, {"name": "Appetizers 4", "description": "Four types of appetizers on one plate.", "price": "₪100"}, {"name": "Fried Cheese", "description": "Crispy fried cheese bites.", "price": "₪33"}, {"name": "French Fries", "description": "Salty and crispy fried potatoes.", "price": "₪17"}], "ar": [{"name": "هوم فرايز", "description": "بطاطا مقلية منزلية مع تتبيلة خاصة.", "price": "₪30"}, {"name": "كبه (4)", "description": "4 قطع من الكبه المقليه المحشوه.", "price": "₪30"}, {"name": "معجنات", "description": "تشكيلة من المعجنات الطازجة.", "price": "₪30"}, {"name": "كرباتشيو فيلي", "description": "شرائح رقيقة من لحم الفيليه مع زيت الزيتون.", "price": "₪52"}, {"name": "باذنجان مع طحينه", "description": "باذنجان مشوي مع طحينة وصوص الليمون.", "price": "₪35"}, {"name": "فطر محشي بالجبنة", "description": "فطر طازج محشي بالجبنة الذائبة.", "price": "₪50"}, {"name": "بلاطه مقبلات", "description": "تشكيلة فاخرة من المقبلات المتنوعة.", "price": "₪50"}, {"name": "جبنة مقلية", "description": "قطع جبنة مقلية مقرمشة.", "price": "₪25"}, {"name": "شيبس", "description": "بطاطا مقلية مملحة ومقرمشة.", "price": "₪20"}], "he": [{"name": "הום פרייז", "description": "תפוחי אדמה מטוגנים ביתיים עם תיבול מיוחד.", "price": "₪30"}, {"name": "קובה (יחידה)", "description": "קובה ממולאת בבשר ומטוגנת.", "price": "₪7"}, {"name": "מאפים", "description": "מבחר מאפים טריים.", "price": "₪33"}, {"name": "קרפצ'יו פילה", "description": "פרוסות דקות של פילה בקר עם שמן זית.", "price": "₪52"}, {"name": "חציל עם טחינה", "description": "חציל קלוי עם טחינה ורוטב לימון.", "price": "₪35"}, {"name": "פטריות ממולאות בגבינה", "description": "פטריות טריות ממולאות בגבינה נמסה.", "price": "₪50"}, {"name": "פלטת מנות פתיחה", "description": "מבחר יוקרתי של מנות פתיחה מגוונות.", "price": "₪50"}, {"name": "מיני ערייס", "description": "חתיכות פיתה ממולאות בבשר על האש.", "price": "₪40"}, {"name": "ארנצ'יני", "description": "כדורי ריזוטו יוקרתיים.", "price": "₪40"}, {"name": "מנות פתיחה 4", "description": "ארבעה סוגי מנות פתיחה על צלחת אחת.", "price": "₪100"}, {"name": "גבינה מטוגנת", "description": "חתיכות גבינה מטוגנת וקריספית.", "price": "₪33"}, {"name": "צ'יפס", "description": "תפוחי אדמה מטוגנים, מלוחים וקריספיים.", "price": "₪17"}]}, "italian-dishes": {"en": [{"name": "Fettuccine Seafood", "description": "Fettuccine with mixed seafood (mussels / shrimp / calamari).", "price": "₪90.00"}, {"name": "Chicken Fettuccine", "description": "Fettuccine in creamy sauce with tender chicken.", "price": "₪75.00"}, {"name": "Veal Fillet Fettuccine", "description": "Fettuccine with sliced veal fillet in a rich cream sauce.", "price": "₪90.00"}, {"name": "Fettuccine", "description": "Classic fettuccine with creamy sauce.", "price": "₪65.00"}, {"name": "Cheese Ravioli", "description": "Ravioli stuffed with cheese, cooked in a creamy sauce.", "price": "₪70.00"}, {"name": "Potato Ravioli", "description": "Ravioli stuffed with potatoes, served with Italian sauce.", "price": "₪70.00"}, {"name": "Chicken Macaroni", "description": "Italian macaroni with chicken slices and rich sauce.", "price": "₪70.00"}, {"name": "Potato Macaroni", "description": "Italian macaroni filled with potatoes and special creamy sauce.", "price": "₪60.00"}, {"name": "Penne", "description": "Penne pasta with tomato or creamy sauce upon request.", "price": "₪65.00"}, {"name": "Penne Fillet", "description": "Penne pasta with tomato or creamy sauce upon request.", "price": "₪90.00"}, {"name": "Chicken Penne", "description": "Penne pasta with tomato or creamy sauce upon request.", "price": "₪75.00"}], "ar": [{"name": "فتوتشيني فواكه بحر", "description": "فتوتشيني مع فواكي بحر (صدف/شريمبس/كلاماري)", "price": "₪90.00"}, {"name": "فوتوتشيني دجاج", "description": "فوتوتشيني بصوص كريمي ودجاج طري.", "price": "₪75.00"}, {"name": "فوتوتشيني فيليه عجل", "description": "فوتوتشيني مع شرائح فيليه عجل وصوص كريمة فاخرة.", "price": "₪90.00"}, {"name": "فوتوتشيني", "description": "فوتوتشيني كلاسيكية مع صوص كريمي.", "price": "₪70"}, {"name": "رفيولي جبنة", "description": "رفيولي محشوة بالجبن، مطهية بصوص كريمي.", "price": "₪70.00"}, {"name": "رفيولي بطاطا", "description": "رفيولي محشوة بالبطاطا ومطهية بصوص إيطالي.", "price": "₪70.00"}, {"name": "مكرام دجاج", "description": "طبق مكرام إيطالي مع شرائح دجاج وصوص غني.", "price": "₪70.00"}, {"name": "مكرام بطاطا", "description": "مكرام إيطالي محشو بالبطاطا، وصوص كريمي خاص.", "price": "₪60.00"}, {"name": "بيني", "description": "معكرونة بيني مع صوص الطماطم أو الكريمي حسب الطلب.", "price": "₪70"}, {"name": "بيني فيلي", "description": "معكرونة بيني مع صوص الطماطم أو الكريمي حسب الطلب.", "price": "₪90.00"}, {"name": "بيني جاج", "description": "معكرونة بيني مع صوص الطماطم أو الكريمي حسب الطلب.", "price": "₪75.00"}], "he": [{"name": "פטוצ'יני פירות ים", "description": "פטוצ'יני עם פירות ים (צדפות / שרימפס / קלמארי).", "price": "₪90.00"}, {"name": "פטוצ'יני עוף", "description": "פטוצ'יני ברוטב שמנת עם עוף רך.", "price": "₪75.00"}, {"name": "פטוצ'יני פילה עגל", "description": "פטוצ'יני עם פרוסות פילה עגל ברוטב שמנת עשיר.", "price": "₪90.00"}, {"name": "פטוצ'יני", "description": "פטוצ'יני קלאסי ברוטב שמנת.", "price": "₪65.00"}, {"name": "רביולי גבינות", "description": "רביולי במילוי גבינות, מבושל ברוטב שמנת.", "price": "₪70.00"}, {"name": "רביולי תפוחי אדמה", "description": "רביולי במילוי תפוחי אדמה, מוגש עם רוטב איטלקי.", "price": "₪70.00"}, {"name": "מקרוני עוף", "description": "מקרוני איטלקי עם פרוסות עוף ורוטב עשיר.", "price": "₪70.00"}, {"name": "מקרוני תפוחי אדמה", "description": "מקרוני איטלקי במילוי תפוחי אדמה עם רוטב שמנת מיוחד.", "price": "₪60.00"}, {"name": "פנה", "description": "פסטת פנה עם רוטב עגבניות או שמנת לפי בחירה.", "price": "₪65.00"}, {"name": "פנה פילה", "description": "פסטת פנה עם רוטב עגבניות או שמנת לפי בחירה.", "price": "₪90.00"}, {"name": "פנה עוף", "description": "פסטת פנה עם רוטב עגבניות או שמנת לפי בחירה.", "price": "₪75.00"}]}, "trad": {"en": [{"name": "Fawaregh – Single", "description": "Grilled traditional sausage stuffed with rice and meat.", "price": "₪120"}, {"name": "Lamb Shoulder (Serves 4)", "description": "Oven-cooked lamb shoulder for four people, served with rice and toasted almonds.", "price": "₪450.00"}, {"name": "Smoked Asado (For Two)", "description": "Slow-smoked beef ribs cooked over low heat for two people.", "price": "₪280"}, {"name": "Smoked Asado – Single", "description": "Slow-smoked beef ribs cooked over low heat for one person.", "price": "₪150.00"}, {"name": "Fawaregh – For Two", "description": "Special fawaregh dish served for two people.", "price": "₪220"}, {"name": "Lamb Mansaf – Single", "description": "Traditional Lebanese lamb mansaf for one person.", "price": "₪160"}, {"name": "Veal Mansaf – For Two", "description": "Veal mansaf for two people, served with yogurt and bread.", "price": "₪240"}, {"name": "Lamb Mansaf – For Two", "description": "Lamb mansaf for two people, served with yogurt and bread.", "price": "₪320"}, {"name": "Veal Mansaf – Single", "description": "Premium veal mansaf for one person.", "price": "₪130"}], "ar": [{"name": "فوارغ فردي", "description": "سجق بلدي مشوي محشو بالأرز واللحم.", "price": "₪120"}, {"name": "كتف خروف 4", "description": "كتف خروف مطبوخ بالفرن لاربع اشخاص مع رز ولوز محمص.", "price": "₪450.00"}, {"name": "اسادو مدخن 2", "description": "ضلع لحم بقري مدخن على نار هادئة لشخصين.", "price": "₪280"}, {"name": "اسادو مدخن فردي", "description": "ضلع لحم بقري مدخن على نار هادئة لشخص.", "price": "₪140"}, {"name": "فوارغ زوجي", "description": "طبق فوارغ مميز لشخصين.", "price": "₪220"}, {"name": "منسف خروف فردي", "description": "منسف خروف لبناني لشخص واحد.", "price": "₪140"}, {"name": "منسف عجل زوجي", "description": "منسف عجل لشخصين مع لبن وخبز.", "price": "₪230"}, {"name": "منسف خروف زوجي", "description": "منسف خروف لشخصين مع لبن وخبز.", "price": "₪280"}, {"name": "منسف عجل فردي", "description": "منسف عجل فاخر لشخص واحد.", "price": "₪120"}], "he": [{"name": "פווארג – יחיד", "description": "נקניקייה ביתית צלויה במילוי אורז ובשר.", "price": "₪120"}, {"name": "כתף כבש (ל־4 סועדים)", "description": "כתף כבש אפויה בתנור לארבעה סועדים, מוגשת עם אורז ושקדים קלויים.", "price": "₪450.00"}, {"name": "אסאדו מעושן (לזוג)", "description": "צלעות בקר מעושנות בבישול איטי על אש נמוכה לשני סועדים.", "price": "₪280"}, {"name": "אסאדו מעושן – יחיד", "description": "צלעות בקר מעושנות בבישול איטי על אש נמוכה לסועד אחד.", "price": "₪140"}, {"name": "פווארג – זוגי", "description": "מנת פווארג מיוחדת לשני סועדים.", "price": "₪220"}, {"name": "מנסף כבש – יחיד", "description": "מנסף כבש לבנוני מסורתי לסועד אחד.", "price": "₪160"}, {"name": "מנסף עגל – זוגי", "description": "מנסף עגל לשני סועדים, מוגש עם לבן ולחם.", "price": "₪240"}, {"name": "מנסף כבש – זוגי", "description": "מנסף כבש לשני סועדים, מוגש עם לבן ולחם.", "price": "₪320"}, {"name": "מנסף עגל – יחיד", "description": "מנסף עגל איכותי לסועד אחד.", "price": "₪130"}]}, "drinks": {"en": [{"name": "XL", "description": "", "price": "₪13"}, {"name": "Mojito", "description": "Available flavors: Blueberry, Pineapple, Watermelon, Apple, Special Blend. Served with a soft drink of your choice.", "price": "₪30"}, {"name": "Grape Juice", "description": "", "price": "₪13"}, {"name": "Soda", "description": "", "price": "₪12"}, {"name": "Water", "description": "", "price": "₪17"}, {"name": "Coca-Cola Zero", "description": "", "price": "₪13"}, {"name": "Coca-Cola", "description": "", "price": "₪13"}, {"name": "Sprite", "description": "", "price": "₪13"}, {"name": "Fanta", "description": "", "price": "₪13"}, {"name": "Coca-Cola zero big", "description": "", "price": "₪20"}, {"name": "Coca-Cola big", "description": "", "price": "₪20"}], "ar": [{"name": "اكس ال", "description": "", "price": "₪13"}, {"name": "موخيتو", "description": "نكهات متوفرة: توت بري، أناناس، بطيخ، تفاح، خلطة مميزة. يُقدم مع مشروب غازي حسب الطلب.", "price": "₪28"}, {"name": "بريق موخيتو", "description": "نكهات متوفرة: توت بري، أناناس، بطيخ، تفاح، خلطة مميزة. يُقدم مع مشروب غازي حسب الطلب.", "price": "₪50"}, {"name": "عصير عنب", "description": "", "price": "₪13"}, {"name": "صودا", "description": "", "price": "₪12"}, {"name": "ماء", "description": "", "price": "₪18"}, {"name": "كولا زيرو", "description": "", "price": "₪13"}, {"name": "كولا", "description": "", "price": "₪13"}, {"name": "سبرايت", "description": "", "price": "₪13"}, {"name": "فانتا", "description": "", "price": "₪13"}, {"name": "زيرو كبير", "description": "", "price": "₪20"}, {"name": "كولا كبير", "description": "", "price": "₪20"}], "he": [{"name": "אקס אל", "description": "", "price": "₪13"}, {"name": "מוחיטו", "description": "טעמים זמינים: אוכמניות, אננס, אבטיח, תפוח, תערובת מיוחדת. מוגש עם משקה מוגז לבחירה.", "price": "₪30"}, {"name": "מיץ ענבים", "description": "", "price": "₪13"}, {"name": "סודה", "description": "", "price": "₪12"}, {"name": "מים", "description": "", "price": "₪17"}, {"name": "קולה זירו", "description": "", "price": "₪13"}, {"name": "קולה", "description": "", "price": "₪13"}, {"name": "ספרייט", "description": "", "price": "₪13"}, {"name": "פנטה", "description": "", "price": "₪13"}, {"name": "קולה זירו גדול", "description": "", "price": "₪20"}, {"name": "קולה גדול", "description": "", "price": "₪20"}]}, "juices": {"en": [{"name": "Fruit Shake", "description": "", "price": "₪25.00"}, {"name": "Carrot Juice", "description": "", "price": "₪20.00"}, {"name": "Orange & Carrot", "description": "", "price": "₪20.00"}, {"name": "Grapefruit Juice", "description": "", "price": "₪25.00"}, {"name": "Lemonade", "description": "", "price": "₪20.00"}, {"name": "Orange Juice", "description": "", "price": "₪20.00"}, {"name": "lemonade kettle", "description": "", "price": "₪28.00"}, {"name": "lemon-mint kettle", "description": "", "price": "₪50.00"}], "ar": [{"name": "جروس", "description": "", "price": "₪25.00"}, {"name": "ليمونادا", "description": "", "price": "₪20.00"}, {"name": "برتقال", "description": "", "price": "₪20.00"}, {"name": "بريق لمونادا", "description": "", "price": "₪25"}, {"name": "بريق برتقال", "description": "", "price": "₪25"}, {"name": "بريق جروس", "description": "", "price": "₪45"}], "he": [{"name": "שייק פירות", "description": "", "price": "₪25.00"}, {"name": "מיץ גזר", "description": "", "price": "₪20.00"}, {"name": "תפוז וגזר", "description": "", "price": "₪20.00"}, {"name": "מיץ אשכוליות", "description": "", "price": "₪25.00"}, {"name": "לימונדה", "description": "", "price": "₪20.00"}, {"name": "מיץ תפוזים", "description": "", "price": "₪20.00"}, {"name": "קןקן למונאדה", "description": "", "price": "₪28.00"}, {"name": "קןקן גרוס", "description": "", "price": "₪50.00"}]}, "desserts": {"en": [{"name": "San Sebastian", "description": "", "price": "₪50"}, {"name": "Cheesecake", "description": "", "price": "₪50"}, {"name": "Hot Cake", "description": "", "price": "₪50"}, {"name": "Soufflé", "description": "", "price": "₪50"}, {"name": "Oreo Sushi", "description": "", "price": "₪50"}, {"name": "Snickers", "description": "", "price": "₪50"}], "ar": [{"name": "سان سبستيان", "description": "", "price": "₪45"}, {"name": "كعكة الجبنة", "description": "", "price": "₪45"}, {"name": "كعكة ساخنة", "description": "", "price": "₪45"}, {"name": "سوفليه", "description": "", "price": "₪45"}, {"name": "سوشي اوريو", "description": "", "price": "₪45"}, {"name": "سنكرز", "description": "", "price": "₪45"}], "he": [{"name": "סן סבסטיאן", "description": "", "price": "₪50"}, {"name": "עוגת גבינה", "description": "", "price": "₪50"}, {"name": "עוגה חמה", "description": "", "price": "₪50"}, {"name": "סופלה", "description": "", "price": "₪50"}, {"name": "סושי אוראו", "description": "", "price": "₪50"}, {"name": "סניקרס", "description": "", "price": "₪50"}]}, "hookahs": {"en": [{"name": "Blueberry", "description": "", "price": "₪50"}, {"name": "Lemon Mint", "description": "", "price": "₪50"}, {"name": "Double Apple", "description": "", "price": "₪50"}, {"name": "Shami", "description": "", "price": "₪50"}, {"name": "Green Mint", "description": "", "price": "₪50"}, {"name": "Apple", "description": "", "price": "₪50"}, {"name": "Love 66", "description": "", "price": "₪50"}], "ar": [{"name": "بلو بري", "description": "", "price": "₪45"}, {"name": "ليمون نعنع", "description": "", "price": "₪45"}, {"name": "تفاحتين", "description": "", "price": "₪45"}, {"name": "شامي", "description": "", "price": "₪45"}, {"name": "أخضر نعنع", "description": "", "price": "₪45"}, {"name": "تفاحه", "description": "", "price": "₪45"}, {"name": "Love 66", "description": "", "price": "₪45"}], "he": [{"name": "בלוברי", "description": "", "price": "₪50"}, {"name": "לימון נענע", "description": "", "price": "₪50"}, {"name": "שני תפוחים", "description": "", "price": "₪50"}, {"name": "שמי", "description": "", "price": "₪50"}, {"name": "נענע ירוק", "description": "", "price": "₪50"}, {"name": "תפוח", "description": "", "price": "₪50"}, {"name": "Love 66", "description": "", "price": "₪50"}]}};
-const WORDS={"topLocation": {"en": "TAMRAH ENTRANCE · PARKING AVAILABLE", "ar": "مدخل طمرة · مواقف متوفرة", "he": "כניסה לטמרה · חניה זמינה"}, "navMenu": {"en": "The menu", "ar": "قائمة الطعام", "he": "התפריט"}, "navBooking": {"en": "Table map & booking", "ar": "الطاولات والحجز", "he": "מפת שולחנות והזמנה"}, "navReviews": {"en": "Guest stories", "ar": "آراء ضيوفنا", "he": "חוויות אורחים"}, "navEvents": {"en": "Private events", "ar": "المناسبات الخاصة", "he": "אירועים פרטיים"}, "navLocation": {"en": "Find us", "ar": "موقعنا", "he": "איך מגיעים"}, "requestTable": {"en": "Request a table", "ar": "اطلب طاولتك", "he": "בקשה לשולחן"}, "heroEyebrow": {"en": "THE ART OF COMING TOGETHER", "ar": "للّمة طعم آخر", "he": "הקסם שבלהיות יחד"}, "heroLine1": {"en": "An evening,", "ar": "أمسية تجمعنا،", "he": "ערב של טעמים,"}, "heroLine2": {"en": "beautifully", "ar": "ونكهة", "he": "רגעים"}, "heroLine3": {"en": "savoured.", "ar": "تبقى بالذاكرة.", "he": "שנשארים."}, "heroDescription": {"en": "Good food. Warm company. A little magic.<br>Welcome to Chef Waleed, where every table has a story.", "ar": "طعام شهيّ. صحبة دافئة. ولمسة من السحر.<br>أهلاً بكم في شيف وليد، حيث لكل طاولة حكاية.", "he": "אוכל טוב. חברה נעימה. נגיעה של קסם.<br>ברוכים הבאים לשף וליד, לכל שולחן יש סיפור."}, "exploreMenu": {"en": "Explore the menu", "ar": "اكتشف القائمة", "he": "לגלות את התפריט"}, "address": {"en": "Tamrah entrance", "ar": "مدخل طمرة", "he": "כניסה לטמרה"}, "stampTop": {"en": "MADE WITH", "ar": "يُحضّر", "he": "מוכן עם"}, "stampMiddle": {"en": "passion", "ar": "بشغف", "he": "תשוקה"}, "stampBottom": {"en": "SERVED WITH CARE", "ar": "ويُقدّم بحب", "he": "מוגש באהבה"}, "photoEyebrow": {"en": "A PLACE TO STAY A LITTLE LONGER", "ar": "مكان يحلو فيه البقاء", "he": "מקום להישאר בו עוד קצת"}, "photoTitle": {"en": "Your table is waiting.", "ar": "طاولتكم بانتظاركم.", "he": "השולחן שלכם מחכה."}, "heroBottom": {"en": "THOUGHTFULLY PREPARED. BEAUTIFULLY SHARED.", "ar": "نحضّره بعناية. ونتشاركه بمحبة.", "he": "מוכן בקפידה. משותף באהבה."}, "scrollDiscover": {"en": "SCROLL TO DISCOVER", "ar": "اكتشف المزيد", "he": "לגלות עוד"}, "ribbonFood": {"en": "Flavours worth gathering for", "ar": "نكهات تجمعنا", "he": "טעמים שכדאי להתאסף בשבילם"}, "ribbonRoom": {"en": "An atmosphere to remember", "ar": "أجواء لا تُنسى", "he": "אווירה שנשארת בזיכרון"}, "ribbonMoment": {"en": "Make an evening of it", "ar": "أمسية تستحق وقتكم", "he": "תנו לעצמכם ערב"}, "menuEyebrow": {"en": "FROM CHEF WALEED'S KITCHEN", "ar": "من مطبخ شيف وليد", "he": "מהמטבח של שף וליד"}, "menuTitle": {"en": "A taste of <em>our table.</em>", "ar": "على مائدتنا <em>حكاية.</em>", "he": "טעימה <em>מהשולחן שלנו.</em>"}, "menuIntro": {"en": "From generous sharing plates to the final sweet bite. Find something familiar. Discover a new favourite.", "ar": "من أطباق المشاركة السخية حتى آخر لقمة حلوة. نكهات مألوفة وأطباق جديدة تحبونها.", "he": "ממנות נדיבות לחלוקה ועד הביס המתוק האחרון. טעמים מוכרים ומנות חדשות להתאהב בהן."}, "viewMore": {"en": "View all dishes", "ar": "عرض جميع الأطباق", "he": "לכל המנות"}, "viewLess": {"en": "Show fewer dishes", "ar": "عرض أقل", "he": "להציג פחות"}, "allergyNote": {"en": "Dietary tags are based on menu descriptions. Please tell our team about allergies and confirm ingredients before ordering.", "ar": "التصنيفات مبنية على وصف الأطباق. يرجى إبلاغ طاقمنا بأي حساسية والتأكد من المكونات قبل الطلب.", "he": "תגיות התזונה מבוססות על תיאורי המנות. נא לעדכן את הצוות באלרגיות ולוודא מרכיבים לפני ההזמנה."}, "menuSource": {"en": "Dishes and prices from the restaurant's linked menu.", "ar": "الأطباق والأسعار من قائمة المطعم المرتبطة.", "he": "המנות והמחירים מתוך התפריט המקושר של המסעדה."}, "originalMenu": {"en": "View original menu", "ar": "القائمة الأصلية", "he": "לתפריט המקורי"}, "bookingEyebrow": {"en": "MAKE YOURSELF AT HOME", "ar": "مكانكم بين أهل البيت", "he": "תרגישו בבית"}, "bookingTitle": {"en": "Find your <em>favourite spot.</em>", "ar": "اختاروا <em>مكانكم المفضّل.</em>", "he": "מצאו את <em>המקום שלכם.</em>"}, "bookingIntro": {"en": "An intimate table for two or room for the whole family. Choose your party size, then select a table on our dining room map.", "ar": "طاولة لشخصين أو مكان يجمع العائلة. اختاروا عدد الضيوف، ثم طاولتكم من خريطة المطعم.", "he": "שולחן זוגי או מקום לכל המשפחה. בחרו את מספר האורחים ואז שולחן במפת המסעדה."}, "diningRoom": {"en": "THE DINING ROOM", "ar": "صالة المطعم", "he": "חלל המסעדה"}, "mapInstruction": {"en": "Select a table to request it", "ar": "اضغطوا على الطاولة لطلبها", "he": "בחרו שולחן לבקשה"}, "selectable": {"en": "Selectable", "ar": "متاحة للاختيار", "he": "ניתן לבחירה"}, "selected": {"en": "Selected", "ar": "مختارة", "he": "נבחר"}, "reception": {"en": "Reception", "ar": "الاستقبال", "he": "קבלה"}, "entrance": {"en": "ENTRANCE", "ar": "المدخل", "he": "כניסה"}, "mapFootnote": {"en": "24 tables · 128 seats · Based on our dining room layout", "ar": "24 طاولة · 128 مقعداً · حسب مخطط المطعم", "he": "24 שולחנות · 128 מקומות · לפי מפת המסעדה"}, "mapCapacity": {"en": "Tables that are too small are dimmed.", "ar": "الطاولات الصغيرة لعددكم تظهر بلون باهت.", "he": "שולחנות קטנים מדי מוצגים במעומעם."}, "yourEvening": {"en": "YOUR EVENING STARTS HERE", "ar": "أمسيتكم تبدأ هنا", "he": "הערב שלכם מתחיל כאן"}, "date": {"en": "Date", "ar": "التاريخ", "he": "תאריך"}, "time": {"en": "Time", "ar": "الوقت", "he": "שעה"}, "guests": {"en": "Guests", "ar": "الضيوف", "he": "אורחים"}, "preferredTable": {"en": "Preferred table", "ar": "الطاولة المفضلة", "he": "שולחן מועדף"}, "yourName": {"en": "Your name", "ar": "الاسم", "he": "השם שלכם"}, "phone": {"en": "Phone number", "ar": "رقم الهاتف", "he": "מספר טלפון"}, "sendRequest": {"en": "Send table request", "ar": "إرسال طلب الطاولة", "he": "שליחת בקשה לשולחן"}, "confirmationNotice": {"en": "Table requests are subject to confirmation.", "ar": "طلبات الطاولات خاضعة للتأكيد.", "he": "בקשות לשולחנות כפופות לאישור."}, "bookingDemoNote": {"en": "Simulator: this request stays on your device. No reservation is sent to the restaurant.", "ar": "محاكاة: يُحفظ الطلب على جهازك فقط ولا يُرسل أي حجز للمطعم.", "he": "הדמיה: הבקשה נשמרת במכשיר בלבד. לא נשלחת הזמנה למסעדה."}, "largeGroup": {"en": "More than 8 guests? Let us plan it with you.", "ar": "أكثر من 8 ضيوف؟ دعونا نخطط معكم.", "he": "יותר מ־8 אורחים? נתכנן אתכם ביחד."}, "callTeam": {"en": "Call our team · 04 851 2000", "ar": "اتصلوا بفريقنا · 04 851 2000", "he": "התקשרו לצוות · 04 851 2000"}, "eventsEyebrow": {"en": "YOUR OCCASION. OUR UNDIVIDED ATTENTION.", "ar": "مناسبتكم. وكل اهتمامنا.", "he": "האירוע שלכם. מלוא תשומת הלב שלנו."}, "eventsTitle": {"en": "Some moments<br>deserve <em>more.</em>", "ar": "بعض اللحظات<br>تستحق <em>المزيد.</em>", "he": "יש רגעים<br>שמגיע להם <em>יותר.</em>"}, "eventsText": {"en": "Bring everyone together for a celebration that feels like you. Family milestones, private gatherings, and evenings with the whole venue to yourselves.", "ar": "اجمعوا أحباءكم في احتفال يليق بكم. مناسبات عائلية ولقاءات خاصة وأمسيات يكون فيها المطعم لكم وحدكم.", "he": "אספו את כולם לחגיגה בסגנון שלכם. אירועים משפחתיים, מפגשים פרטיים וערבים שבהם כל המקום לרשותכם."}, "eventRule": {"en": "Large groups and private events are reserved exclusively by phone. Event reservations cannot be booked online.", "ar": "حجوزات المجموعات الكبيرة والمناسبات الخاصة تتم حصرياً عبر الهاتف، ولا يمكن حجزها عبر الموقع.", "he": "הזמנת קבוצות גדולות ואירועים פרטיים מתבצעת בטלפון בלבד. לא ניתן להזמין אירועים באתר."}, "callEvent": {"en": "Call to reserve an event", "ar": "اتصلوا لحجز مناسبة", "he": "התקשרו להזמנת אירוע"}, "reviewsEyebrow": {"en": "AROUND OUR TABLE", "ar": "حول مائدتنا", "he": "מסביב לשולחן שלנו"}, "reviewsTitle": {"en": "Every visit, <em>a story.</em>", "ar": "في كل زيارة، <em>حكاية.</em>", "he": "כל ביקור, <em>סיפור.</em>"}, "writeReview": {"en": "Share your experience", "ar": "شاركوا تجربتكم", "he": "שתפו את החוויה"}, "sampleNotice": {"en": "SIMULATED REVIEWS · NOT REAL GUEST TESTIMONIALS", "ar": "آراء تجريبية للمحاكاة · ليست شهادات حقيقية", "he": "ביקורות לדוגמה · אינן חוות דעת אמיתיות"}, "reviewPolicy": {"en": "Every compliment and complaint goes to the owner first. Feedback appears here only after owner approval.", "ar": "كل إشادة وشكوى تُرسل أولاً لصاحب المطعم. لا يظهر التقييم هنا إلا بعد موافقته.", "he": "כל מחמאה ותלונה מגיעה תחילה לבעלים. ביקורת תופיע כאן רק לאחר אישורו."}, "locationEyebrow": {"en": "WE'LL KEEP A PLACE FOR YOU", "ar": "مكانكم محفوظ في قلوبنا", "he": "שומרים לכם מקום"}, "locationTitle": {"en": "See you <em>at Waleed's.</em>", "ar": "نلتقي <em>عند وليد.</em>", "he": "נפגשים <em>אצל וליד.</em>"}, "openingHours": {"en": "Opening hours", "ar": "ساعات العمل", "he": "שעות פתיחה"}, "hours": {"en": "12 noon – 10:30 PM", "ar": "من 12 ظهراً حتى 10:30 مساءً", "he": "12:00 בצהריים – 22:30"}, "parking": {"en": "Parking available", "ar": "مواقف سيارات متوفرة", "he": "חניה זמינה"}, "parkingText": {"en": "Arrive comfortably. Your evening starts here.", "ar": "وصول مريح. وأمسية جميلة تبدأ هنا.", "he": "הגיעו בנוחות. הערב שלכם מתחיל כאן."}, "openWaze": {"en": "Find us on Waze", "ar": "موقعنا على Waze", "he": "מצאו אותנו ב־Waze"}, "mapCaption": {"en": "Explore the area on Google Maps", "ar": "استكشفوا المنطقة على خرائط Google", "he": "גלו את האזור במפות Google"}, "footerTagline": {"en": "Come for the food. Stay for the feeling.", "ar": "تأتون للطعم. وتبقون للأجواء.", "he": "באים בשביל האוכל. נשארים בשביל ההרגשה."}, "ownerDemo": {"en": "Owner simulator", "ar": "محاكاة لوحة المالك", "he": "הדמיית ניהול"}, "replayWelcome": {"en": "Replay welcome", "ar": "إعادة عرض الترحيب", "he": "הפעלת הפתיח מחדש"}, "simulatorFooter": {"en": "Interactive preview · No live reservations", "ar": "معاينة تفاعلية · لا توجد حجوزات فعلية", "he": "תצוגה אינטראקטיבית · ללא הזמנות בפועל"}, "weListen": {"en": "WE'RE LISTENING", "ar": "نحن نصغي لكم", "he": "אנחנו מקשיבים"}, "shareStory": {"en": "Tell us your story.", "ar": "احكوا لنا تجربتكم.", "he": "ספרו לנו את הסיפור שלכם."}, "feedbackType": {"en": "Feedback type", "ar": "نوع التقييم", "he": "סוג המשוב"}, "compliment": {"en": "Compliment", "ar": "إشادة", "he": "מחמאה"}, "complaint": {"en": "Complaint", "ar": "شكوى", "he": "תלונה"}, "yourRating": {"en": "Your rating", "ar": "تقييمكم", "he": "הדירוג שלכם"}, "feedback": {"en": "Your feedback", "ar": "ملاحظاتكم", "he": "המשוב שלכם"}, "reviewConsent": {"en": "I agree that my name, rating, and feedback may appear after owner approval.", "ar": "أوافق على نشر اسمي وتقييمي وملاحظاتي بعد موافقة صاحب المطعم.", "he": "אני מסכים לפרסום שמי, דירוגי והמשוב שלי לאחר אישור הבעלים."}, "reviewDemoNote": {"en": "Simulator: feedback is saved only in this browser for you to try moderation.", "ar": "محاكاة: تُحفظ الملاحظات في هذا المتصفح فقط لتجربة المراجعة.", "he": "הדמיה: המשוב נשמר בדפדפן זה בלבד להתנסות במערכת האישור."}, "submitReview": {"en": "Submit for owner approval", "ar": "إرسال لموافقة المالك", "he": "שליחה לאישור הבעלים"}, "ownerTitle": {"en": "Behind the scenes.", "ar": "خلف الكواليس.", "he": "מאחורי הקלעים."}, "ownerNotice": {"en": "Try the approval workflow here. This is a browser-local demonstration, not a protected owner account.", "ar": "جرّبوا مراجعة الطلبات هنا. هذه محاكاة محلية في المتصفح وليست حساب مالك محمياً.", "he": "התנסו בתהליך האישור. זו הדמיה מקומית בדפדפן, ולא חשבון בעלים מאובטח."}, "reviewQueue": {"en": "Review queue", "ar": "قائمة التقييمات", "he": "תור ביקורות"}, "bookingQueue": {"en": "Table requests", "ar": "طلبات الطاولات", "he": "בקשות לשולחנות"}, "resetDemo": {"en": "Reset simulated data", "ar": "إعادة ضبط بيانات المحاكاة", "he": "איפוס נתוני ההדמיה"}, "resetQuestion": {"en": "Clear only this simulator's saved reviews and table requests?", "ar": "مسح التقييمات وطلبات الطاولات المحفوظة في هذه المحاكاة فقط؟", "he": "למחוק רק את הביקורות ובקשות השולחן השמורות בהדמיה זו?"}, "confirmReset": {"en": "Yes, reset demo", "ar": "نعم، إعادة الضبط", "he": "כן, לאפס"}, "cancel": {"en": "Cancel", "ar": "إلغاء", "he": "ביטול"}, "main-dishes": {"en": "Main dishes", "ar": "الأطباق الرئيسية", "he": "מנות עיקריות"}, "salads": {"en": "Salads", "ar": "السلطات", "he": "סלטים"}, "appetizers": {"en": "Small plates", "ar": "المقبلات", "he": "ראשונות"}, "italian-dishes": {"en": "Italian", "ar": "الأطباق الإيطالية", "he": "איטלקי"}, "trad": {"en": "Traditional", "ar": "الأطباق التراثية", "he": "מסורתיות"}, "drinks": {"en": "Drinks", "ar": "المشروبات", "he": "משקאות"}, "juices": {"en": "Juices", "ar": "العصائر", "he": "מיצים"}, "desserts": {"en": "Desserts", "ar": "الحلويات", "he": "קינוחים"}, "hookahs": {"en": "Hookahs", "ar": "الأراجيل", "he": "נרגילות"}, "dishes": {"en": "Dishes", "ar": "أطباق", "he": "מנות"}, "chefPick": {"en": "Chef's recommendation · preview selection", "ar": "توصية الشيف · اختيار تجريبي", "he": "המלצת השף · בחירה לדוגמה"}, "vegetarian": {"en": "Vegetarian ingredients", "ar": "مكونات نباتية", "he": "מרכיבים צמחוניים"}, "seafood": {"en": "Seafood", "ar": "مأكولات بحرية", "he": "פירות ים"}, "meat": {"en": "Meat", "ar": "لحوم", "he": "בשר"}, "share": {"en": "To share", "ar": "للمشاركة", "he": "לחלוקה"}, "anyTable": {"en": "Any suitable table", "ar": "أي طاولة مناسبة", "he": "כל שולחן מתאים"}, "table": {"en": "Table", "ar": "طاولة", "he": "שולחן"}, "seats": {"en": "seats", "ar": "مقاعد", "he": "מקומות"}, "guestUnit": {"en": "guests", "ar": "ضيوف", "he": "אורחים"}, "leftSide": {"en": "Left-side dining", "ar": "الجهة اليسرى", "he": "צד שמאל"}, "centerRoom": {"en": "Central dining", "ar": "وسط الصالة", "he": "מרכז החלל"}, "rightSide": {"en": "Right-side dining", "ar": "الجهة اليمنى", "he": "צד ימין"}, "frontRoom": {"en": "Front dining area", "ar": "مقدمة الصالة", "he": "חזית החלל"}, "largeTable": {"en": "Large-table area", "ar": "منطقة الطاولات الكبيرة", "he": "אזור השולחנות הגדולים"}, "bookingSuccess": {"en": "Your simulated request is saved and awaiting owner confirmation. No booking has been sent. You can inspect it in the Owner simulator.", "ar": "حُفظ طلب المحاكاة وينتظر تأكيد المالك. لم يُرسل حجز فعلي. يمكنك مراجعته في لوحة المحاكاة.", "he": "בקשת ההדמיה נשמרה וממתינה לאישור. לא נשלחה הזמנה בפועל. ניתן לצפות בה בהדמיית הניהול."}, "pastDate": {"en": "Please select a future date and time during opening hours.", "ar": "يرجى اختيار تاريخ ووقت قادم ضمن ساعات العمل.", "he": "נא לבחור תאריך ושעה עתידיים בשעות הפתיחה."}, "invalidPhone": {"en": "Please enter a valid phone number.", "ar": "يرجى إدخال رقم هاتف صحيح.", "he": "נא להזין מספר טלפון תקין."}, "largePhone": {"en": "For more than 8 guests, please call 04 851 2000.", "ar": "لأكثر من 8 ضيوف، يرجى الاتصال على 04 851 2000.", "he": "ליותר מ־8 אורחים התקשרו ל־04 851 2000."}, "reviewSuccess": {"en": "Thank you. Your simulated feedback is in the owner's review queue. It will appear publicly in this preview only after approval.", "ar": "شكراً لكم. تقييمكم التجريبي بانتظار مراجعة المالك، ولن يظهر في المعاينة إلا بعد الموافقة.", "he": "תודה. המשוב לדוגמה ממתין לאישור הבעלים ויופיע בתצוגה רק לאחר אישור."}, "sampleGuest": {"en": "Preview guest", "ar": "ضيف تجريبي", "he": "אורח לדוגמה"}, "sampleReview": {"en": "Sample review", "ar": "تقييم تجريبي", "he": "ביקורת לדוגמה"}, "approvedReview": {"en": "Approved in this simulator", "ar": "مُعتمد في المحاكاة", "he": "אושר בהדמיה"}, "published": {"en": "Published reviews", "ar": "تقييمات منشورة", "he": "ביקורות שפורסמו"}, "noQueue": {"en": "No requests yet. Submit a form to try the workflow.", "ar": "لا توجد طلبات بعد. أرسل نموذجاً لتجربة المراجعة.", "he": "אין בקשות עדיין. שלחו טופס כדי להתנסות בתהליך."}, "noReviews": {"en": "No published feedback yet.", "ar": "لا توجد تقييمات منشورة بعد.", "he": "עדיין אין ביקורות שפורסמו."}, "approve": {"en": "Approve & publish", "ar": "الموافقة والنشر", "he": "אישור ופרסום"}, "reject": {"en": "Decline", "ar": "رفض", "he": "דחייה"}, "confirmBooking": {"en": "Confirm in simulator", "ar": "تأكيد في المحاكاة", "he": "אישור בהדמיה"}, "pending": {"en": "Awaiting review", "ar": "بانتظار المراجعة", "he": "ממתין לבדיקה"}, "approved": {"en": "Approved", "ar": "مقبول", "he": "אושר"}, "rejected": {"en": "Declined", "ar": "مرفوض", "he": "נדחה"}, "confirmed": {"en": "Confirmed in simulator", "ar": "مؤكد في المحاكاة", "he": "אושר בהדמיה"}, "updated": {"en": "Simulator updated.", "ar": "تم تحديث المحاكاة.", "he": "ההדמיה עודכנה."}, "conflict": {"en": "This table already has a confirmed simulated request within two hours. Choose another table or time.", "ar": "للطاولة طلب تجريبي مؤكد خلال ساعتين من الوقت المحدد. اختر طاولة أو وقتاً آخر.", "he": "לשולחן יש בקשה מאושרת בהדמיה בטווח של שעתיים. בחרו שולחן או שעה אחרים."}, "sessionOnly": {"en": "Browser storage is unavailable. Demo data will last only while this page is open.", "ar": "التخزين غير متاح. تبقى بيانات المحاكاة أثناء فتح الصفحة فقط.", "he": "אחסון הדפדפן אינו זמין. הנתונים יישמרו רק כל עוד העמוד פתוח."}, "reviewSample1": {"en": "The warm lights, the blossoms, the feeling of being welcome. Exactly the kind of evening you want to linger over.", "ar": "الإضاءة الدافئة والزهور وحفاوة الاستقبال. أجواء تتمنى أن تطول فيها الأمسية.", "he": "האור החם, הפרחים וקבלת הפנים. בדיוק מסוג הערבים שרוצים להאריך."}, "reviewSample2": {"en": "A table full of beautiful dishes and the whole family together. A lovely setting for a special occasion.", "ar": "مائدة مليئة بالأطباق الجميلة والعائلة مجتمعة. مكان رائع لمناسبة مميزة.", "he": "שולחן מלא מנות יפות וכל המשפחה יחד. מקום מקסים לאירוע מיוחד."}, "reviewSample3": {"en": "From the first shared plate to dessert, an evening made for slowing down and enjoying good company.", "ar": "من أول طبق نتشاركه حتى الحلوى، أمسية للاستمتاع بالطعام والصحبة الجميلة.", "he": "מהמנה הראשונה לחלוקה ועד הקינוח, ערב להאט בו וליהנות מחברה טובה."}, "photoMenu": {"en": "View the menu with photos", "ar": "عرض قائمة الطعام بالصور", "he": "לצפייה בתפריט עם תמונות"}, "welcomeIntro": {"en": "WELCOME TO OUR TABLE", "ar": "أهلاً بكم على مائدتنا", "he": "ברוכים הבאים לשולחן שלנו"}};
+const WORDS={
+  "topLocation": {
+    "en": "TAMRAH ENTRANCE · PARKING AVAILABLE",
+    "ar": "مدخل طمرة · مواقف متوفرة",
+    "he": "כניסה לטמרה · חניה זמינה"
+  },
+  "navMenu": {
+    "en": "The menu",
+    "ar": "قائمة الطعام",
+    "he": "התפריט"
+  },
+  "navBooking": {
+    "en": "Table map & booking",
+    "ar": "الطاولات والحجز",
+    "he": "מפת שולחנות והזמנה"
+  },
+  "navReviews": {
+    "en": "Guest stories",
+    "ar": "آراء ضيوفنا",
+    "he": "חוויות אורחים"
+  },
+  "navEvents": {
+    "en": "Private events",
+    "ar": "المناسبات الخاصة",
+    "he": "אירועים פרטיים"
+  },
+  "navLocation": {
+    "en": "Find us",
+    "ar": "موقعنا",
+    "he": "איך מגיעים"
+  },
+  "requestTable": {
+    "en": "Request a table",
+    "ar": "اطلب طاولتك",
+    "he": "בקשה לשולחן"
+  },
+  "heroEyebrow": {
+    "en": "THE ART OF COMING TOGETHER",
+    "ar": "للّمة طعم آخر",
+    "he": "הקסם שבלהיות יחד"
+  },
+  "heroLine1": {
+    "en": "An evening,",
+    "ar": "أمسية تجمعنا،",
+    "he": "ערב של טעמים,"
+  },
+  "heroLine2": {
+    "en": "beautifully",
+    "ar": "ونكهة",
+    "he": "רגעים"
+  },
+  "heroLine3": {
+    "en": "savoured.",
+    "ar": "تبقى بالذاكرة.",
+    "he": "שנשארים."
+  },
+  "heroDescription": {
+    "en": "Good food. Warm company. A little magic.<br>Welcome to Chef Waleed, where every table has a story.",
+    "ar": "طعام شهيّ. صحبة دافئة. ولمسة من السحر.<br>أهلاً بكم في شيف وليد، حيث لكل طاولة حكاية.",
+    "he": "אוכל טוב. חברה נעימה. נגיעה של קסם.<br>ברוכים הבאים לשף וליד, לכל שולחן יש סיפור."
+  },
+  "exploreMenu": {
+    "en": "Explore the menu",
+    "ar": "اكتشف القائمة",
+    "he": "לגלות את התפריט"
+  },
+  "address": {
+    "en": "Tamrah entrance",
+    "ar": "مدخل طمرة",
+    "he": "כניסה לטמרה"
+  },
+  "stampTop": {
+    "en": "MADE WITH",
+    "ar": "يُحضّر",
+    "he": "מוכן עם"
+  },
+  "stampMiddle": {
+    "en": "passion",
+    "ar": "بشغف",
+    "he": "תשוקה"
+  },
+  "stampBottom": {
+    "en": "SERVED WITH CARE",
+    "ar": "ويُقدّم بحب",
+    "he": "מוגש באהבה"
+  },
+  "photoEyebrow": {
+    "en": "A PLACE TO STAY A LITTLE LONGER",
+    "ar": "مكان يحلو فيه البقاء",
+    "he": "מקום להישאר בו עוד קצת"
+  },
+  "photoTitle": {
+    "en": "Your table is waiting.",
+    "ar": "طاولتكم بانتظاركم.",
+    "he": "השולחן שלכם מחכה."
+  },
+  "heroBottom": {
+    "en": "THOUGHTFULLY PREPARED. BEAUTIFULLY SHARED.",
+    "ar": "نحضّره بعناية. ونتشاركه بمحبة.",
+    "he": "מוכן בקפידה. משותף באהבה."
+  },
+  "scrollDiscover": {
+    "en": "SCROLL TO DISCOVER",
+    "ar": "اكتشف المزيد",
+    "he": "לגלות עוד"
+  },
+  "ribbonFood": {
+    "en": "Flavours worth gathering for",
+    "ar": "نكهات تجمعنا",
+    "he": "טעמים שכדאי להתאסף בשבילם"
+  },
+  "ribbonRoom": {
+    "en": "An atmosphere to remember",
+    "ar": "أجواء لا تُنسى",
+    "he": "אווירה שנשארת בזיכרון"
+  },
+  "ribbonMoment": {
+    "en": "Make an evening of it",
+    "ar": "أمسية تستحق وقتكم",
+    "he": "תנו לעצמכם ערב"
+  },
+  "menuEyebrow": {
+    "en": "FROM CHEF WALEED'S KITCHEN",
+    "ar": "من مطبخ شيف وليد",
+    "he": "מהמטבח של שף וליד"
+  },
+  "menuTitle": {
+    "en": "A taste of <em>our table.</em>",
+    "ar": "على مائدتنا <em>حكاية.</em>",
+    "he": "טעימה <em>מהשולחן שלנו.</em>"
+  },
+  "menuIntro": {
+    "en": "From generous sharing plates to the final sweet bite. Find something familiar. Discover a new favourite.",
+    "ar": "من أطباق المشاركة السخية حتى آخر لقمة حلوة. نكهات مألوفة وأطباق جديدة تحبونها.",
+    "he": "ממנות נדיבות לחלוקה ועד הביס המתוק האחרון. טעמים מוכרים ומנות חדשות להתאהב בהן."
+  },
+  "viewMore": {
+    "en": "View all dishes",
+    "ar": "عرض جميع الأطباق",
+    "he": "לכל המנות"
+  },
+  "viewLess": {
+    "en": "Show fewer dishes",
+    "ar": "عرض أقل",
+    "he": "להציג פחות"
+  },
+  "allergyNote": {
+    "en": "Dietary tags are based on menu descriptions. Please tell our team about allergies and confirm ingredients before ordering.",
+    "ar": "التصنيفات مبنية على وصف الأطباق. يرجى إبلاغ طاقمنا بأي حساسية والتأكد من المكونات قبل الطلب.",
+    "he": "תגיות התזונה מבוססות על תיאורי המנות. נא לעדכן את הצוות באלרגיות ולוודא מרכיבים לפני ההזמנה."
+  },
+  "menuSource": {
+    "en": "Dishes and prices from the restaurant's linked menu.",
+    "ar": "الأطباق والأسعار من قائمة المطعم المرتبطة.",
+    "he": "המנות והמחירים מתוך התפריט המקושר של המסעדה."
+  },
+  "originalMenu": {
+    "en": "View original menu",
+    "ar": "القائمة الأصلية",
+    "he": "לתפריט המקורי"
+  },
+  "bookingEyebrow": {
+    "en": "MAKE YOURSELF AT HOME",
+    "ar": "مكانكم بين أهل البيت",
+    "he": "תרגישו בבית"
+  },
+  "bookingTitle": {
+    "en": "Find your <em>favourite spot.</em>",
+    "ar": "اختاروا <em>مكانكم المفضّل.</em>",
+    "he": "מצאו את <em>המקום שלכם.</em>"
+  },
+  "bookingIntro": {
+    "en": "An intimate table for two or room for the whole family. Choose your party size, then select a table on our dining room map.",
+    "ar": "طاولة لشخصين أو مكان يجمع العائلة. اختاروا عدد الضيوف، ثم طاولتكم من خريطة المطعم.",
+    "he": "שולחן זוגי או מקום לכל המשפחה. בחרו את מספר האורחים ואז שולחן במפת המסעדה."
+  },
+  "diningRoom": {
+    "en": "THE DINING ROOM",
+    "ar": "صالة المطعم",
+    "he": "חלל המסעדה"
+  },
+  "mapInstruction": {
+    "en": "Select a table to request it",
+    "ar": "اضغطوا على الطاولة لطلبها",
+    "he": "בחרו שולחן לבקשה"
+  },
+  "selectable": {
+    "en": "Selectable",
+    "ar": "متاحة للاختيار",
+    "he": "ניתן לבחירה"
+  },
+  "selected": {
+    "en": "Selected",
+    "ar": "مختارة",
+    "he": "נבחר"
+  },
+  "reception": {
+    "en": "Reception",
+    "ar": "الاستقبال",
+    "he": "קבלה"
+  },
+  "entrance": {
+    "en": "ENTRANCE",
+    "ar": "المدخل",
+    "he": "כניסה"
+  },
+  "mapFootnote": {
+    "en": "24 tables · 128 seats · Based on our dining room layout",
+    "ar": "24 طاولة · 128 مقعداً · حسب مخطط المطعم",
+    "he": "24 שולחנות · 128 מקומות · לפי מפת המסעדה"
+  },
+  "mapCapacity": {
+    "en": "Tables that are too small are dimmed.",
+    "ar": "الطاولات الصغيرة لعددكم تظهر بلون باهت.",
+    "he": "שולחנות קטנים מדי מוצגים במעומעם."
+  },
+  "yourEvening": {
+    "en": "YOUR EVENING STARTS HERE",
+    "ar": "أمسيتكم تبدأ هنا",
+    "he": "הערב שלכם מתחיל כאן"
+  },
+  "date": {
+    "en": "Date",
+    "ar": "التاريخ",
+    "he": "תאריך"
+  },
+  "time": {
+    "en": "Time",
+    "ar": "الوقت",
+    "he": "שעה"
+  },
+  "guests": {
+    "en": "Guests",
+    "ar": "الضيوف",
+    "he": "אורחים"
+  },
+  "preferredTable": {
+    "en": "Preferred table",
+    "ar": "الطاولة المفضلة",
+    "he": "שולחן מועדף"
+  },
+  "yourName": {
+    "en": "Your name",
+    "ar": "الاسم",
+    "he": "השם שלכם"
+  },
+  "phone": {
+    "en": "Phone number",
+    "ar": "رقم الهاتف",
+    "he": "מספר טלפון"
+  },
+  "sendRequest": {
+    "en": "Send table request",
+    "ar": "إرسال طلب الطاولة",
+    "he": "שליחת בקשה לשולחן"
+  },
+  "confirmationNotice": {
+    "en": "Table requests are subject to confirmation.",
+    "ar": "طلبات الطاولات خاضعة للتأكيد.",
+    "he": "בקשות לשולחנות כפופות לאישור."
+  },
+  "bookingDemoNote": {
+    "en": "Simulator: this request stays on your device. No reservation is sent to the restaurant.",
+    "ar": "محاكاة: يُحفظ الطلب على جهازك فقط ولا يُرسل أي حجز للمطعم.",
+    "he": "הדמיה: הבקשה נשמרת במכשיר בלבד. לא נשלחת הזמנה למסעדה."
+  },
+  "largeGroup": {
+    "en": "More than 8 guests? Let us plan it with you.",
+    "ar": "أكثر من 8 ضيوف؟ دعونا نخطط معكم.",
+    "he": "יותר מ־8 אורחים? נתכנן אתכם ביחד."
+  },
+  "callTeam": {
+    "en": "Call our team · 04 851 2000",
+    "ar": "اتصلوا بفريقنا · 04 851 2000",
+    "he": "התקשרו לצוות · 04 851 2000"
+  },
+  "eventsEyebrow": {
+    "en": "YOUR OCCASION. OUR UNDIVIDED ATTENTION.",
+    "ar": "مناسبتكم. وكل اهتمامنا.",
+    "he": "האירוע שלכם. מלוא תשומת הלב שלנו."
+  },
+  "eventsTitle": {
+    "en": "Some moments<br>deserve <em>more.</em>",
+    "ar": "بعض اللحظات<br>تستحق <em>المزيد.</em>",
+    "he": "יש רגעים<br>שמגיע להם <em>יותר.</em>"
+  },
+  "eventsText": {
+    "en": "Bring everyone together for a celebration that feels like you. Family milestones, private gatherings, and evenings with the whole venue to yourselves.",
+    "ar": "اجمعوا أحباءكم في احتفال يليق بكم. مناسبات عائلية ولقاءات خاصة وأمسيات يكون فيها المطعم لكم وحدكم.",
+    "he": "אספו את כולם לחגיגה בסגנון שלכם. אירועים משפחתיים, מפגשים פרטיים וערבים שבהם כל המקום לרשותכם."
+  },
+  "eventRule": {
+    "en": "Large groups and private events are reserved exclusively by phone. Event reservations cannot be booked online.",
+    "ar": "حجوزات المجموعات الكبيرة والمناسبات الخاصة تتم حصرياً عبر الهاتف، ولا يمكن حجزها عبر الموقع.",
+    "he": "הזמנת קבוצות גדולות ואירועים פרטיים מתבצעת בטלפון בלבד. לא ניתן להזמין אירועים באתר."
+  },
+  "callEvent": {
+    "en": "Call to reserve an event",
+    "ar": "اتصلوا لحجز مناسبة",
+    "he": "התקשרו להזמנת אירוע"
+  },
+  "reviewsEyebrow": {
+    "en": "AROUND OUR TABLE",
+    "ar": "حول مائدتنا",
+    "he": "מסביב לשולחן שלנו"
+  },
+  "reviewsTitle": {
+    "en": "Every visit, <em>a story.</em>",
+    "ar": "في كل زيارة، <em>حكاية.</em>",
+    "he": "כל ביקור, <em>סיפור.</em>"
+  },
+  "writeReview": {
+    "en": "Share your experience",
+    "ar": "شاركوا تجربتكم",
+    "he": "שתפו את החוויה"
+  },
+  "sampleNotice": {
+    "en": "SIMULATED REVIEWS · NOT REAL GUEST TESTIMONIALS",
+    "ar": "آراء تجريبية للمحاكاة · ليست شهادات حقيقية",
+    "he": "ביקורות לדוגמה · אינן חוות דעת אמיתיות"
+  },
+  "reviewPolicy": {
+    "en": "Every compliment and complaint goes to the owner first. Feedback appears here only after owner approval.",
+    "ar": "كل إشادة وشكوى تُرسل أولاً لصاحب المطعم. لا يظهر التقييم هنا إلا بعد موافقته.",
+    "he": "כל מחמאה ותלונה מגיעה תחילה לבעלים. ביקורת תופיע כאן רק לאחר אישורו."
+  },
+  "locationEyebrow": {
+    "en": "WE'LL KEEP A PLACE FOR YOU",
+    "ar": "مكانكم محفوظ في قلوبنا",
+    "he": "שומרים לכם מקום"
+  },
+  "locationTitle": {
+    "en": "See you <em>at Waleed's.</em>",
+    "ar": "نلتقي <em>عند وليد.</em>",
+    "he": "נפגשים <em>אצל וליד.</em>"
+  },
+  "openingHours": {
+    "en": "Opening hours",
+    "ar": "ساعات العمل",
+    "he": "שעות פתיחה"
+  },
+  "hours": {
+    "en": "12 noon – 10:30 PM",
+    "ar": "من 12 ظهراً حتى 10:30 مساءً",
+    "he": "12:00 בצהריים – 22:30"
+  },
+  "parking": {
+    "en": "Parking available",
+    "ar": "مواقف سيارات متوفرة",
+    "he": "חניה זמינה"
+  },
+  "parkingText": {
+    "en": "Arrive comfortably. Your evening starts here.",
+    "ar": "وصول مريح. وأمسية جميلة تبدأ هنا.",
+    "he": "הגיעו בנוחות. הערב שלכם מתחיל כאן."
+  },
+  "openWaze": {
+    "en": "Find us on Waze",
+    "ar": "موقعنا على Waze",
+    "he": "מצאו אותנו ב־Waze"
+  },
+  "mapCaption": {
+    "en": "Explore the area on Google Maps",
+    "ar": "استكشفوا المنطقة على خرائط Google",
+    "he": "גלו את האזור במפות Google"
+  },
+  "footerTagline": {
+    "en": "Come for the food. Stay for the feeling.",
+    "ar": "تأتون للطعم. وتبقون للأجواء.",
+    "he": "באים בשביל האוכל. נשארים בשביל ההרגשה."
+  },
+  "ownerDemo": {
+    "en": "Owner simulator",
+    "ar": "محاكاة لوحة المالك",
+    "he": "הדמיית ניהול"
+  },
+  "replayWelcome": {
+    "en": "Replay welcome",
+    "ar": "إعادة عرض الترحيب",
+    "he": "הפעלת הפתיח מחדש"
+  },
+  "simulatorFooter": {
+    "en": "Interactive preview · No live reservations",
+    "ar": "معاينة تفاعلية · لا توجد حجوزات فعلية",
+    "he": "תצוגה אינטראקטיבית · ללא הזמנות בפועל"
+  },
+  "weListen": {
+    "en": "WE'RE LISTENING",
+    "ar": "نحن نصغي لكم",
+    "he": "אנחנו מקשיבים"
+  },
+  "shareStory": {
+    "en": "Tell us your story.",
+    "ar": "احكوا لنا تجربتكم.",
+    "he": "ספרו לנו את הסיפור שלכם."
+  },
+  "feedbackType": {
+    "en": "Feedback type",
+    "ar": "نوع التقييم",
+    "he": "סוג המשוב"
+  },
+  "compliment": {
+    "en": "Compliment",
+    "ar": "إشادة",
+    "he": "מחמאה"
+  },
+  "complaint": {
+    "en": "Complaint",
+    "ar": "شكوى",
+    "he": "תלונה"
+  },
+  "yourRating": {
+    "en": "Your rating",
+    "ar": "تقييمكم",
+    "he": "הדירוג שלכם"
+  },
+  "feedback": {
+    "en": "Your feedback",
+    "ar": "ملاحظاتكم",
+    "he": "המשוב שלכם"
+  },
+  "reviewConsent": {
+    "en": "I agree that my name, rating, and feedback may appear after owner approval.",
+    "ar": "أوافق على نشر اسمي وتقييمي وملاحظاتي بعد موافقة صاحب المطعم.",
+    "he": "אני מסכים לפרסום שמי, דירוגי והמשוב שלי לאחר אישור הבעלים."
+  },
+  "reviewDemoNote": {
+    "en": "Simulator: feedback is saved only in this browser for you to try moderation.",
+    "ar": "محاكاة: تُحفظ الملاحظات في هذا المتصفح فقط لتجربة المراجعة.",
+    "he": "הדמיה: המשוב נשמר בדפדפן זה בלבד להתנסות במערכת האישור."
+  },
+  "submitReview": {
+    "en": "Submit for owner approval",
+    "ar": "إرسال لموافقة المالك",
+    "he": "שליחה לאישור הבעלים"
+  },
+  "ownerTitle": {
+    "en": "Behind the scenes.",
+    "ar": "خلف الكواليس.",
+    "he": "מאחורי הקלעים."
+  },
+  "ownerNotice": {
+    "en": "Try the approval workflow here. This is a browser-local demonstration, not a protected owner account.",
+    "ar": "جرّبوا مراجعة الطلبات هنا. هذه محاكاة محلية في المتصفح وليست حساب مالك محمياً.",
+    "he": "התנסו בתהליך האישור. זו הדמיה מקומית בדפדפן, ולא חשבון בעלים מאובטח."
+  },
+  "reviewQueue": {
+    "en": "Review queue",
+    "ar": "قائمة التقييمات",
+    "he": "תור ביקורות"
+  },
+  "bookingQueue": {
+    "en": "Table requests",
+    "ar": "طلبات الطاولات",
+    "he": "בקשות לשולחנות"
+  },
+  "resetDemo": {
+    "en": "Reset simulated data",
+    "ar": "إعادة ضبط بيانات المحاكاة",
+    "he": "איפוס נתוני ההדמיה"
+  },
+  "resetQuestion": {
+    "en": "Clear only this simulator's saved reviews and table requests?",
+    "ar": "مسح التقييمات وطلبات الطاولات المحفوظة في هذه المحاكاة فقط؟",
+    "he": "למחוק רק את הביקורות ובקשות השולחן השמורות בהדמיה זו?"
+  },
+  "confirmReset": {
+    "en": "Yes, reset demo",
+    "ar": "نعم، إعادة الضبط",
+    "he": "כן, לאפס"
+  },
+  "cancel": {
+    "en": "Cancel",
+    "ar": "إلغاء",
+    "he": "ביטול"
+  },
+  "main-dishes": {
+    "en": "Main dishes",
+    "ar": "الأطباق الرئيسية",
+    "he": "מנות עיקריות"
+  },
+  "salads": {
+    "en": "Salads",
+    "ar": "السلطات",
+    "he": "סלטים"
+  },
+  "appetizers": {
+    "en": "Small plates",
+    "ar": "المقبلات",
+    "he": "ראשונות"
+  },
+  "italian-dishes": {
+    "en": "Italian",
+    "ar": "الأطباق الإيطالية",
+    "he": "איטלקי"
+  },
+  "trad": {
+    "en": "Traditional",
+    "ar": "الأطباق التراثية",
+    "he": "מסורתיות"
+  },
+  "drinks": {
+    "en": "Drinks",
+    "ar": "المشروبات",
+    "he": "משקאות"
+  },
+  "juices": {
+    "en": "Juices",
+    "ar": "العصائر",
+    "he": "מיצים"
+  },
+  "desserts": {
+    "en": "Desserts",
+    "ar": "الحلويات",
+    "he": "קינוחים"
+  },
+  "hookahs": {
+    "en": "Hookahs",
+    "ar": "الأراجيل",
+    "he": "נרגילות"
+  },
+  "dishes": {
+    "en": "Dishes",
+    "ar": "أطباق",
+    "he": "מנות"
+  },
+  "chefPick": {
+    "en": "Chef's recommendation · preview selection",
+    "ar": "توصية الشيف · اختيار تجريبي",
+    "he": "המלצת השף · בחירה לדוגמה"
+  },
+  "vegetarian": {
+    "en": "Vegetarian ingredients",
+    "ar": "مكونات نباتية",
+    "he": "מרכיבים צמחוניים"
+  },
+  "seafood": {
+    "en": "Seafood",
+    "ar": "مأكولات بحرية",
+    "he": "פירות ים"
+  },
+  "meat": {
+    "en": "Meat",
+    "ar": "لحوم",
+    "he": "בשר"
+  },
+  "share": {
+    "en": "To share",
+    "ar": "للمشاركة",
+    "he": "לחלוקה"
+  },
+  "anyTable": {
+    "en": "Any suitable table",
+    "ar": "أي طاولة مناسبة",
+    "he": "כל שולחן מתאים"
+  },
+  "table": {
+    "en": "Table",
+    "ar": "طاولة",
+    "he": "שולחן"
+  },
+  "seats": {
+    "en": "seats",
+    "ar": "مقاعد",
+    "he": "מקומות"
+  },
+  "guestUnit": {
+    "en": "guests",
+    "ar": "ضيوف",
+    "he": "אורחים"
+  },
+  "leftSide": {
+    "en": "Left-side dining",
+    "ar": "الجهة اليسرى",
+    "he": "צד שמאל"
+  },
+  "centerRoom": {
+    "en": "Central dining",
+    "ar": "وسط الصالة",
+    "he": "מרכז החלל"
+  },
+  "rightSide": {
+    "en": "Right-side dining",
+    "ar": "الجهة اليمنى",
+    "he": "צד ימין"
+  },
+  "frontRoom": {
+    "en": "Front dining area",
+    "ar": "مقدمة الصالة",
+    "he": "חזית החלל"
+  },
+  "largeTable": {
+    "en": "Large-table area",
+    "ar": "منطقة الطاولات الكبيرة",
+    "he": "אזור השולחנות הגדולים"
+  },
+  "bookingSuccess": {
+    "en": "Your simulated request is saved and awaiting owner confirmation. No booking has been sent. You can inspect it in the Owner simulator.",
+    "ar": "حُفظ طلب المحاكاة وينتظر تأكيد المالك. لم يُرسل حجز فعلي. يمكنك مراجعته في لوحة المحاكاة.",
+    "he": "בקשת ההדמיה נשמרה וממתינה לאישור. לא נשלחה הזמנה בפועל. ניתן לצפות בה בהדמיית הניהול."
+  },
+  "pastDate": {
+    "en": "Please select a future date and time during opening hours.",
+    "ar": "يرجى اختيار تاريخ ووقت قادم ضمن ساعات العمل.",
+    "he": "נא לבחור תאריך ושעה עתידיים בשעות הפתיחה."
+  },
+  "invalidPhone": {
+    "en": "Please enter a valid phone number.",
+    "ar": "يرجى إدخال رقم هاتف صحيح.",
+    "he": "נא להזין מספר טלפון תקין."
+  },
+  "largePhone": {
+    "en": "For more than 8 guests, please call 04 851 2000.",
+    "ar": "لأكثر من 8 ضيوف، يرجى الاتصال على 04 851 2000.",
+    "he": "ליותר מ־8 אורחים התקשרו ל־04 851 2000."
+  },
+  "reviewSuccess": {
+    "en": "Thank you. Your simulated feedback is in the owner's review queue. It will appear publicly in this preview only after approval.",
+    "ar": "شكراً لكم. تقييمكم التجريبي بانتظار مراجعة المالك، ولن يظهر في المعاينة إلا بعد الموافقة.",
+    "he": "תודה. המשוב לדוגמה ממתין לאישור הבעלים ויופיע בתצוגה רק לאחר אישור."
+  },
+  "sampleGuest": {
+    "en": "Preview guest",
+    "ar": "ضيف تجريبي",
+    "he": "אורח לדוגמה"
+  },
+  "sampleReview": {
+    "en": "Sample review",
+    "ar": "تقييم تجريبي",
+    "he": "ביקורת לדוגמה"
+  },
+  "approvedReview": {
+    "en": "Approved in this simulator",
+    "ar": "مُعتمد في المحاكاة",
+    "he": "אושר בהדמיה"
+  },
+  "published": {
+    "en": "Published reviews",
+    "ar": "تقييمات منشورة",
+    "he": "ביקורות שפורסמו"
+  },
+  "noQueue": {
+    "en": "No requests yet. Submit a form to try the workflow.",
+    "ar": "لا توجد طلبات بعد. أرسل نموذجاً لتجربة المراجعة.",
+    "he": "אין בקשות עדיין. שלחו טופס כדי להתנסות בתהליך."
+  },
+  "noReviews": {
+    "en": "No published feedback yet.",
+    "ar": "لا توجد تقييمات منشورة بعد.",
+    "he": "עדיין אין ביקורות שפורסמו."
+  },
+  "approve": {
+    "en": "Approve & publish",
+    "ar": "الموافقة والنشر",
+    "he": "אישור ופרסום"
+  },
+  "reject": {
+    "en": "Decline",
+    "ar": "رفض",
+    "he": "דחייה"
+  },
+  "confirmBooking": {
+    "en": "Confirm in simulator",
+    "ar": "تأكيد في المحاكاة",
+    "he": "אישור בהדמיה"
+  },
+  "pending": {
+    "en": "Awaiting review",
+    "ar": "بانتظار المراجعة",
+    "he": "ממתין לבדיקה"
+  },
+  "approved": {
+    "en": "Approved",
+    "ar": "مقبول",
+    "he": "אושר"
+  },
+  "rejected": {
+    "en": "Declined",
+    "ar": "مرفوض",
+    "he": "נדחה"
+  },
+  "confirmed": {
+    "en": "Confirmed in simulator",
+    "ar": "مؤكد في المحاكاة",
+    "he": "אושר בהדמיה"
+  },
+  "updated": {
+    "en": "Simulator updated.",
+    "ar": "تم تحديث المحاكاة.",
+    "he": "ההדמיה עודכנה."
+  },
+  "conflict": {
+    "en": "This table already has a confirmed simulated request within two hours. Choose another table or time.",
+    "ar": "للطاولة طلب تجريبي مؤكد خلال ساعتين من الوقت المحدد. اختر طاولة أو وقتاً آخر.",
+    "he": "לשולחן יש בקשה מאושרת בהדמיה בטווח של שעתיים. בחרו שולחן או שעה אחרים."
+  },
+  "sessionOnly": {
+    "en": "Browser storage is unavailable. Demo data will last only while this page is open.",
+    "ar": "التخزين غير متاح. تبقى بيانات المحاكاة أثناء فتح الصفحة فقط.",
+    "he": "אחסון הדפדפן אינו זמין. הנתונים יישמרו רק כל עוד העמוד פתוח."
+  },
+  "reviewSample1": {
+    "en": "The warm lights, the blossoms, the feeling of being welcome. Exactly the kind of evening you want to linger over.",
+    "ar": "الإضاءة الدافئة والزهور وحفاوة الاستقبال. أجواء تتمنى أن تطول فيها الأمسية.",
+    "he": "האור החם, הפרחים וקבלת הפנים. בדיוק מסוג הערבים שרוצים להאריך."
+  },
+  "reviewSample2": {
+    "en": "A table full of beautiful dishes and the whole family together. A lovely setting for a special occasion.",
+    "ar": "مائدة مليئة بالأطباق الجميلة والعائلة مجتمعة. مكان رائع لمناسبة مميزة.",
+    "he": "שולחן מלא מנות יפות וכל המשפחה יחד. מקום מקסים לאירוע מיוחד."
+  },
+  "reviewSample3": {
+    "en": "From the first shared plate to dessert, an evening made for slowing down and enjoying good company.",
+    "ar": "من أول طبق نتشاركه حتى الحلوى، أمسية للاستمتاع بالطعام والصحبة الجميلة.",
+    "he": "מהמנה הראשונה לחלוקה ועד הקינוח, ערב להאט בו וליהנות מחברה טובה."
+  },
+  "photoMenu": {
+    "en": "View the menu with photos",
+    "ar": "عرض قائمة الطعام بالصور",
+    "he": "לצפייה בתפריט עם תמונות"
+  },
+  "welcomeIntro": {
+    "en": "WELCOME TO OUR TABLE",
+    "ar": "أهلاً بكم على مائدتنا",
+    "he": "ברוכים הבאים לשולחן שלנו"
+  },
+  "mobileMenu": {
+    "en": "Menu",
+    "ar": "القائمة",
+    "he": "תפריט"
+  },
+  "mobileBooking": {
+    "en": "Tables",
+    "ar": "الطاولات",
+    "he": "שולחנות"
+  },
+  "mobileEvents": {
+    "en": "Events",
+    "ar": "المناسبات",
+    "he": "אירועים"
+  },
+  "mobileReviews": {
+    "en": "Reviews",
+    "ar": "الآراء",
+    "he": "ביקורות"
+  },
+  "mobileLocation": {
+    "en": "Location",
+    "ar": "الموقع",
+    "he": "מיקום"
+  }
+}
+;
 const $=id=>document.getElementById(id);
 const KEY='chef-waleed-simulator-v1';
 let lang='ar', category='main-dishes', expanded=false, selectedTable='', ownerTab='reviews', rating=5;
@@ -87,13 +879,14 @@ function renderTables(){
 }
 function dietary(dish){const text=(dish.name+' '+dish.description).toLowerCase();if(/shrimp|calamari|fish|seafood|mussel|salmon|bass|سمك|روبيان|كالاماري|סלמון|דג|שרימפס/.test(text))return 'seafood';if(/chicken|beef|veal|lamb|meat|fillet|دجاج|لحم|עוף|בשר|טלה/.test(text))return 'meat';if(/hummus|eggplant|greek salad|halloumi salad|cheese ravioli|arabic salad|fattoush|حمص|باذنجان|حلومي|חומוס|חציל|חלומי/.test(text))return 'vegetarian';return '';}
 function renderMenu(){
- const cats=Object.keys(MENU);$('menuTabs').innerHTML=cats.map(c=>`<button id="tab-${c}" role="tab" aria-controls="dishList" aria-selected="${c===category}" tabindex="${c===category?0:-1}" data-category="${c}">${esc(t(c))}</button>`).join('');
+ const cats=Object.keys(MENU);if(!$('menuTabs').children.length)$('menuTabs').innerHTML=cats.map(c=>`<button id="tab-${c}" role="tab" aria-controls="dishList" aria-selected="${c===category}" tabindex="${c===category?0:-1}" data-category="${c}">${esc(t(c))}</button>`).join('');
+ cats.forEach(c=>{const tab=$('tab-'+c);tab.textContent=t(c);tab.setAttribute('aria-selected',String(c===category));tab.tabIndex=c===category?0:-1;});
  $('categoryHeading').textContent=t(category);const dishes=MENU[category][lang]||MENU[category].en;$('dishCount').textContent=`${dishes.length} ${t('dishes')}`;
  $('dishList').setAttribute('aria-labelledby','tab-'+category);
  $('dishList').innerHTML=(expanded?dishes:dishes.slice(0,6)).map((d,i)=>{const tag=dietary(d);const pick=/chef|شيف|שף/.test(d.name.toLowerCase())||(category==='trad'&&i===1)||(category==='main-dishes'&&i===8);return `<article class="dish"><div class="dish-title"><h4>${esc(d.name)}</h4><span class="dish-price" dir="ltr">${esc(d.price)}</span></div>${d.description?`<p>${esc(d.description)}</p>`:''}<div class="tags">${tag?`<span class="tag">${esc(t(tag))}</span>`:''}${pick?`<span class="tag chef">${esc(t('chefPick'))}</span>`:''}</div></article>`;}).join('');
  $('moreDishes').hidden=dishes.length<=6;$('moreDishes').textContent=t(expanded?'viewLess':'viewMore');
 }
-function setCategory(c){if(!MENU[c])return false;category=c;expanded=false;renderMenu();return true;}
+function setCategory(c){if(!MENU[c])return false;const top=scrollY;category=c;expanded=false;renderMenu();window.scrollTo({top,behavior:'instant'});return true;}
 function renderReviews(){
  const approved=demo.reviews.filter(r=>r.status==='approved');const samples=[1,2,3].map((n)=>({id:'sample'+n,name:t('sampleGuest')+' '+n,rating:n===3?4:5,feedback:t('reviewSample'+n),sample:true}));const reviews=[...approved,...samples];
  $('reviewList').innerHTML=reviews.map(r=>`<article class="review-card"><span class="stars" role="img" aria-label="${r.rating} / 5">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</span><blockquote dir="auto">“${esc(r.feedback)}”</blockquote><span class="review-author" dir="auto">${esc(r.name)}</span><span class="sample-tag">${esc(t(r.sample?'sampleReview':'approvedReview'))}</span></article>`).join('');
@@ -123,9 +916,15 @@ function moderate(id,action){const rows=ownerTab==='reviews'?demo.reviews:demo.b
  row.status=action==='reject'?'rejected':ownerTab==='reviews'?'approved':'confirmed';save();renderQueue();renderReviews();toast(t('updated'));
 }
 function replay(){const overlay=document.querySelector('.intro-overlay');const copy=overlay.cloneNode(true);overlay.replaceWith(copy);}
-$('menuTabs').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(b){setCategory(b.dataset.category);$('tab-'+category).focus();}});
-$('menuTabs').addEventListener('keydown',e=>{const keys=['ArrowRight','ArrowLeft','Home','End'];if(!keys.includes(e.key))return;e.preventDefault();const cats=Object.keys(MENU),i=cats.indexOf(category);let j=e.key==='Home'?0:e.key==='End'?cats.length-1:(i+(e.key==='ArrowRight'?1:-1)*(lang==='en'?1:-1)+cats.length)%cats.length;setCategory(cats[j]);$('tab-'+category).focus();});
-$('moreDishes').onclick=()=>{expanded=!expanded;renderMenu();};
+$('menuTabs').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(b){setCategory(b.dataset.category);$('tab-'+category).focus({preventScroll:true});}});
+$('menuTabs').addEventListener('keydown',e=>{const keys=['ArrowRight','ArrowLeft','Home','End'];if(!keys.includes(e.key))return;e.preventDefault();const cats=Object.keys(MENU),i=cats.indexOf(category);let j=e.key==='Home'?0:e.key==='End'?cats.length-1:(i+(e.key==='ArrowRight'?1:-1)*(lang==='en'?1:-1)+cats.length)%cats.length;setCategory(cats[j]);$('tab-'+category).focus({preventScroll:true});});
+$('moreDishes').onclick=()=>{
+ expanded=!expanded;renderMenu();
+ // Keep the reader with the menu when its height changes.
+ const target=expanded?$('dishList').children[6]:$('menuTabs');
+ target?.scrollIntoView({block:'start',behavior:'instant'});
+ if(!expanded)$('tab-'+category).focus({preventScroll:true});
+};
 $('partySize').onchange=renderTables;$('tableChoice').onchange=e=>setTable(e.target.value);$('bookingDate').onchange=()=>{$('bookingResult').hidden=true;updateTimes();};$('language').onchange=e=>setLanguage(e.target.value);
 $('bookingForm').onsubmit=e=>{e.preventDefault();const form=e.currentTarget;if(!form.reportValidity())return;const fd=new FormData(form);const date=String(fd.get('date')),time=String(fd.get('time'));const party=getParty(),now=zoneDate();if(date<now.date||(date===now.date&&time<=now.time)||time<'12:00'||time>'22:00'){toast(t('pastDate'));return;}if(party>8){toast(t('largePhone'));return;}const phone=String(fd.get('phone')).trim();if(phone.replace(/\D/g,'').length<7){toast(t('invalidPhone'));return;}const name=String(fd.get('name')).trim();if(!name)return;const req={id:uid(),name,phone,date,time,party,table:selectedTable,status:'pending',created:new Date().toISOString()};if(selectedTable&&demo.bookings.some(b=>b.status==='confirmed'&&overlaps(req,b))){toast(t('conflict'));return;}demo.bookings.unshift(req);save();$('bookingResult').textContent=t('bookingSuccess');$('bookingResult').hidden=false;form.elements.name.value='';form.elements.phone.value='';};
 $('openReview').onclick=()=>{$('reviewForm').hidden=false;$('reviewSuccess').hidden=true;showDialog('reviewDialog');};
@@ -139,7 +938,42 @@ document.querySelectorAll('dialog').forEach(d=>{d.addEventListener('close',()=>{
 $('resetDemo').onclick=()=>$('resetConfirm').hidden=false;$('cancelReset').onclick=()=>$('resetConfirm').hidden=true;
 $('confirmReset').onclick=()=>{demo={reviews:[],bookings:[]};save();$('resetConfirm').hidden=true;$('bookingResult').hidden=true;renderQueue();renderReviews();toast(t('updated'));};
 $('replayWelcome').onclick=()=>{window.scrollTo({top:0,behavior:'instant'});replay();};
-document.querySelectorAll('#navigation a').forEach(a=>a.onclick=()=>{$('navigation').classList.remove('open');$('mobileToggle').setAttribute('aria-expanded','false');});
+// One navigation path for the desktop links, phone shortcuts and hero actions.
+const pageSections=[...document.querySelectorAll('main>section[id]')];
+const sectionLinks=[...document.querySelectorAll('#navigation a,.mobile-sections a')];
+function closeNavigation(){$('navigation').classList.remove('open');$('mobileToggle').setAttribute('aria-expanded','false');}
+function goToSection(id,behavior='instant'){
+ const section=pageSections.find(s=>s.id===id)||$('home');
+ const offset=document.querySelector('.masthead').getBoundingClientRect().height+12;
+ const top=section.id==='home'?0:Math.max(0,scrollY+section.getBoundingClientRect().top-offset);
+ window.scrollTo({top,left:0,behavior});
+}
+function updateSectionNavigation(){
+ const edge=document.querySelector('.masthead').getBoundingClientRect().height+65;
+ const current=pageSections.filter(s=>s.getBoundingClientRect().top<=edge).at(-1)?.id||'home';
+ sectionLinks.forEach(a=>{if(a.hash==='#'+current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
+}
+let scrollFrame=0;
+window.addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;updateSectionNavigation();});},{passive:true});
+document.addEventListener('click',e=>{
+ const a=e.target.closest('a[href^="#"]');
+ if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+ const id=a.hash.slice(1),section=pageSections.find(s=>s.id===id);if(!section)return;
+ e.preventDefault();closeNavigation();
+ if(location.hash!==a.hash)history.pushState(null,'',a.hash);
+ goToSection(id,matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth');
+ if(e.detail===0){section.tabIndex=-1;section.focus({preventScroll:true});}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('navigation').classList.contains('open')){closeNavigation();$('mobileToggle').focus({preventScroll:true});}});
+window.addEventListener('hashchange',()=>{closeNavigation();goToSection(location.hash.slice(1));});
+// Align after dynamic content/fonts render, but never override a guest's gesture.
+let entryUntouched=true;
+const markInteracted=()=>{entryUntouched=false;};
+for(const event of ['pointerdown','touchstart','wheel','keydown'])window.addEventListener(event,markInteracted,{passive:true});
+function alignEntry(){if(entryUntouched){goToSection(location.hash.slice(1));updateSectionNavigation();}}
+window.addEventListener('pageshow',e=>{if(e.persisted)entryUntouched=true;requestAnimationFrame(alignEntry);});
+window.addEventListener('DOMContentLoaded',()=>{alignEntry();document.fonts?.ready.then(()=>requestAnimationFrame(alignEntry));},{once:true});
+
 $('year').textContent=new Date().getFullYear();$('bookingDate').value=zoneDate().date;updateTimes();setLanguage(lang);
 window.addEventListener('storage',e=>{if(e.key!==KEY)return;try{const value=JSON.parse(e.newValue);if(value&&Array.isArray(value.reviews)&&Array.isArray(value.bookings)){demo=value;renderReviews();if($('ownerDialog').open)renderQueue();}}catch(err){}});
 if(document.modelContext?.registerTool){
